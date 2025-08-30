@@ -76,7 +76,7 @@ class Dashboard {
                     <i data-lucide="briefcase" style="width: 48px; height: 48px; color: var(--gray-400);"></i>
                     <h3>No recommendations yet</h3>
                     <p>Complete your profile and skills assessment to get personalized job recommendations</p>
-                    <a href="profile.html" class="btn btn-primary">Complete Profile</a>
+                    <a href="pages/profile.html" class="btn btn-primary">Complete Profile</a>
                 </div>
             `;
             return;
@@ -156,7 +156,7 @@ class Dashboard {
                     <i data-lucide="file-text" style="width: 48px; height: 48px; color: var(--gray-400);"></i>
                     <h3>No applications yet</h3>
                     <p>Start applying to jobs to see your application history here</p>
-                    <a href="jobs.html" class="btn btn-primary">Browse Jobs</a>
+                    <a href="pages/jobs.html" class="btn btn-primary">Browse Jobs</a>
                 </div>
             `;
             return;
@@ -359,17 +359,17 @@ class Dashboard {
 
     handleJobApply(jobId) {
         // Navigate to job details page with apply intent
-        window.location.href = `job-details.html?id=${jobId}&apply=true`;
+        window.location.href = `pages/job-details.html?id=${jobId}&apply=true`;
     }
 
     handleJobView(jobId) {
         // Navigate to job details page
-        window.location.href = `job-details.html?id=${jobId}`;
+        window.location.href = `pages/job-details.html?id=${jobId}`;
     }
 
     handleJobClick(jobId) {
         // Navigate to job details page
-        window.location.href = `job-details.html?id=${jobId}`;
+        window.location.href = `pages/job-details.html?id=${jobId}`;
     }
 
     handleUploadResume() {
@@ -379,7 +379,7 @@ class Dashboard {
 
     handleBrowseJobs() {
         // Navigate to jobs page
-        window.location.href = 'jobs.html';
+        window.location.href = 'pages/jobs.html';
     }
 
     showError(message) {

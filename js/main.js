@@ -29,13 +29,23 @@ class ComponentLoader {
 
     async loadComponents() {
         try {
+            // Determine the correct path based on current location
+            const isInPagesFolder = window.location.pathname.includes('/pages/');
+            const basePath = isInPagesFolder ? '../' : '';
+            
             // Load header component
-            const headerResponse = await fetch('components/header.html');
+            const headerResponse = await fetch(`${basePath}components/header.html`);
+            if (!headerResponse.ok) {
+                throw new Error(`Failed to load header: ${headerResponse.status} ${headerResponse.statusText}`);
+            }
             const headerHTML = await headerResponse.text();
             this.components.set('header', headerHTML);
             
             // Load sidebar component
-            const sidebarResponse = await fetch('components/sidebar.html');
+            const sidebarResponse = await fetch(`${basePath}components/sidebar.html`);
+            if (!sidebarResponse.ok) {
+                throw new Error(`Failed to load sidebar: ${sidebarResponse.status} ${sidebarResponse.statusText}`);
+            }
             const sidebarHTML = await sidebarResponse.text();
             this.components.set('sidebar', sidebarHTML);
             
@@ -196,7 +206,9 @@ class ComponentLoader {
             window.dispatchEvent(new CustomEvent('searchJobs', { detail: { query } }));
         } else {
             // Navigate to jobs page with search
-            window.location.href = `jobs.html?search=${encodeURIComponent(query)}`;
+            const isInPagesFolder = window.location.pathname.includes('/pages/');
+            const basePath = isInPagesFolder ? '' : 'pages/';
+            window.location.href = `pages/${basePath}jobs.html?search=${encodeURIComponent(query)}`;
         }
     }
 

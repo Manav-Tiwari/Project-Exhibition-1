@@ -76,7 +76,11 @@ class RecruiterDashboard {
                     <h3>No active jobs</h3>
                     <p>Post your first job to start receiving applications</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <a href="post-job.html" class="btn btn-primary">Post New Job</a>
+=======
+                                         <a href="pages/post-job.html" class="btn btn-primary">Post New Job</a>
+>>>>>>> parent of 63b4a88 (Site Locations)
 =======
                                          <a href="pages/post-job.html" class="btn btn-primary">Post New Job</a>
 >>>>>>> parent of 63b4a88 (Site Locations)

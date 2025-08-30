@@ -360,7 +360,11 @@ class Dashboard {
     handleJobApply(jobId) {
         // Navigate to job details page with apply intent
 <<<<<<< HEAD
+<<<<<<< HEAD
         window.location.href = `job-details.html?id=${jobId}&apply=true`;
+=======
+        window.location.href = `pages/job-details.html?id=${jobId}&apply=true`;
+>>>>>>> parent of 63b4a88 (Site Locations)
 =======
         window.location.href = `pages/job-details.html?id=${jobId}&apply=true`;
 >>>>>>> parent of 63b4a88 (Site Locations)
@@ -369,7 +373,11 @@ class Dashboard {
     handleJobView(jobId) {
         // Navigate to job details page
 <<<<<<< HEAD
+<<<<<<< HEAD
         window.location.href = `job-details.html?id=${jobId}`;
+=======
+        window.location.href = `pages/job-details.html?id=${jobId}`;
+>>>>>>> parent of 63b4a88 (Site Locations)
 =======
         window.location.href = `pages/job-details.html?id=${jobId}`;
 >>>>>>> parent of 63b4a88 (Site Locations)
@@ -378,7 +386,11 @@ class Dashboard {
     handleJobClick(jobId) {
         // Navigate to job details page
 <<<<<<< HEAD
+<<<<<<< HEAD
         window.location.href = `job-details.html?id=${jobId}`;
+=======
+        window.location.href = `pages/job-details.html?id=${jobId}`;
+>>>>>>> parent of 63b4a88 (Site Locations)
 =======
         window.location.href = `pages/job-details.html?id=${jobId}`;
 >>>>>>> parent of 63b4a88 (Site Locations)
@@ -392,7 +404,11 @@ class Dashboard {
     handleBrowseJobs() {
         // Navigate to jobs page
 <<<<<<< HEAD
+<<<<<<< HEAD
         window.location.href = 'jobs.html';
+=======
+        window.location.href = 'pages/jobs.html';
+>>>>>>> parent of 63b4a88 (Site Locations)
 =======
         window.location.href = 'pages/jobs.html';
 >>>>>>> parent of 63b4a88 (Site Locations)

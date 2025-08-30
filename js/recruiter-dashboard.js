@@ -75,7 +75,7 @@ class RecruiterDashboard {
                     <i data-lucide="briefcase" style="width: 48px; height: 48px; color: var(--gray-400);"></i>
                     <h3>No active jobs</h3>
                     <p>Post your first job to start receiving applications</p>
-                                         <a href="pages/post-job.html" class="btn btn-primary">Post New Job</a>
+                                        <a href="post-job.html" class="btn btn-primary">Post New Job</a>
                 </div>
             `;
             return;

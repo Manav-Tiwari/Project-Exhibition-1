@@ -201,7 +201,7 @@ class ComponentLoader {
 
     handleSearch(query) {
         // Navigate to jobs page with search query
-        if (window.location.pathname.includes('jobs.html')) {
+        if (window.location.pathname.includes('pages/jobs.html')) {
             // If already on jobs page, trigger search
             window.dispatchEvent(new CustomEvent('searchJobs', { detail: { query } }));
         } else {

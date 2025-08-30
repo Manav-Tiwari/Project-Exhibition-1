@@ -75,7 +75,7 @@ class RecruiterDashboard {
                     <i data-lucide="briefcase" style="width: 48px; height: 48px; color: var(--gray-400);"></i>
                     <h3>No active jobs</h3>
                     <p>Post your first job to start receiving applications</p>
-                                        <a href="post-job.html" class="btn btn-primary">Post New Job</a>
+                    <a href="post-job.html" class="btn btn-primary">Post New Job</a>
                 </div>
             `;
             return;
@@ -453,42 +453,42 @@ class RecruiterDashboard {
 
     handleViewApplications(jobId) {
         // Navigate to applications page for this job
-        window.location.href = `pages/applicants.html?jobId=${jobId}`;
+        window.location.href = `applicants.html?jobId=${jobId}`;
     }
 
     handleEditJob(jobId) {
         // Navigate to job edit page
-        window.location.href = `pages/edit-job.html?id=${jobId}`;
+        window.location.href = `edit-job.html?id=${jobId}`;
     }
 
     handleJobPostingClick(jobId) {
         // Navigate to job details page
-        window.location.href = `pages/job-details.html?id=${jobId}`;
+        window.location.href = `job-details.html?id=${jobId}`;
     }
 
     handleViewProfile(applicationId) {
         // Navigate to candidate profile page
-        window.location.href = `candidate-profile.html?id=${applicationId}`;
+        window.location.href = `candidate-profile.html?applicationId=${applicationId}`;
     }
 
     handleScheduleInterview(applicationId) {
         // Navigate to interview scheduling page
-        window.location.href = `pages/schedule-interview.html?applicationId=${applicationId}`;
+        window.location.href = `schedule-interview.html?applicationId=${applicationId}`;
     }
 
     handleApplicationClick(applicationId) {
         // Navigate to application details page
-        window.location.href = `pages/application-details.html?id=${applicationId}`;
+        window.location.href = `application-details.html?id=${applicationId}`;
     }
 
     handlePostNewJob() {
         // Navigate to job posting page
-        window.location.href = 'pages/post-job.html';
+        window.location.href = 'post-job.html';
     }
 
     handleViewCandidates() {
         // Navigate to candidates page
-        window.location.href = 'pages/candidates.html';
+        window.location.href = 'candidates.html';
     }
 
     showError(message) {

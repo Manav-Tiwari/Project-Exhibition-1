@@ -29,23 +29,13 @@ class ComponentLoader {
 
     async loadComponents() {
         try {
-            // Determine the correct path based on current location
-            const isInPagesFolder = window.location.pathname.includes('/pages/');
-            const basePath = isInPagesFolder ? '../' : '';
-            
             // Load header component
-            const headerResponse = await fetch(`${basePath}components/header.html`);
-            if (!headerResponse.ok) {
-                throw new Error(`Failed to load header: ${headerResponse.status} ${headerResponse.statusText}`);
-            }
+            const headerResponse = await fetch('components/header.html');
             const headerHTML = await headerResponse.text();
             this.components.set('header', headerHTML);
             
             // Load sidebar component
-            const sidebarResponse = await fetch(`${basePath}components/sidebar.html`);
-            if (!sidebarResponse.ok) {
-                throw new Error(`Failed to load sidebar: ${sidebarResponse.status} ${sidebarResponse.statusText}`);
-            }
+            const sidebarResponse = await fetch('components/sidebar.html');
             const sidebarHTML = await sidebarResponse.text();
             this.components.set('sidebar', sidebarHTML);
             
@@ -69,59 +59,6 @@ class ComponentLoader {
         if (sidebarContainer && this.components.has('sidebar')) {
             sidebarContainer.innerHTML = this.components.get('sidebar');
         }
-        
-        // Normalize links inside injected components so they work from
-        // both root (index.html) and pages/* locations.
-        const isInPagesFolder = window.location.pathname.includes('/pages/');
-        this.normalizeComponentLinks(isInPagesFolder);
-    }
-
-    // Adjust anchor hrefs inside header/sidebar after injection so links
-    // resolve correctly whether the current page is inside /pages/ or not.
-    normalizeComponentLinks(isInPagesFolder) {
-        const headerContainer = document.getElementById('header-container');
-        const sidebarContainer = document.getElementById('sidebar-container');
-        const containers = [headerContainer, sidebarContainer].filter(Boolean);
-
-        containers.forEach(container => {
-            const anchors = container.querySelectorAll('a[href]');
-            anchors.forEach(a => {
-                const href = a.getAttribute('href');
-                if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:')) return;
-
-                // Normalize links that intentionally point to the pages folder.
-                // If an anchor was authored as "pages/xxx.html", remove the
-                // prefix when we're already inside /pages/ so it becomes
-                // "xxx.html". When on root, keep "pages/xxx.html".
-                if (href.startsWith('pages/')) {
-                    if (isInPagesFolder) {
-                        a.setAttribute('href', href.replace(/^pages\//, ''));
-                    } else {
-                        a.setAttribute('href', href);
-                    }
-                    return;
-                }
-
-                // Normalize index links: ensure they point to the repo root
-                // (index.html) from root, or to "../index.html" from pages/*.
-                if (href.endsWith('index.html') || href === 'index') {
-                    a.setAttribute('href', isInPagesFolder ? '../index.html' : 'index.html');
-                    return;
-                }
-
-                // If a link is a relative path that begins with "./pages/",
-                // treat it like "pages/..." above.
-                if (href.startsWith('./pages/')) {
-                    const cleaned = href.replace(/^\.\//, '');
-                    if (isInPagesFolder) {
-                        a.setAttribute('href', cleaned.replace(/^pages\//, ''));
-                    } else {
-                        a.setAttribute('href', cleaned);
-                    }
-                    return;
-                }
-            });
-        });
     }
 
     initializeGlobalFeatures() {
@@ -254,14 +191,12 @@ class ComponentLoader {
 
     handleSearch(query) {
         // Navigate to jobs page with search query
-        if (window.location.pathname.includes('pages/jobs.html')) {
+        if (window.location.pathname.includes('jobs.html')) {
             // If already on jobs page, trigger search
             window.dispatchEvent(new CustomEvent('searchJobs', { detail: { query } }));
         } else {
             // Navigate to jobs page with search
-            const isInPagesFolder = window.location.pathname.includes('/pages/');
-            const basePath = isInPagesFolder ? '' : 'pages/';
-            window.location.href = `pages/${basePath}jobs.html?search=${encodeURIComponent(query)}`;
+            window.location.href = `jobs.html?search=${encodeURIComponent(query)}`;
         }
     }
 

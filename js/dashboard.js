@@ -358,18 +358,18 @@ class Dashboard {
     }
 
     handleJobApply(jobId) {
-        // Navigate to job details page with apply intent
-        window.location.href = `job-details.html?id=${jobId}&apply=true`;
+    // Navigate to job details page with apply intent
+    window.location.href = `job-details.html?id=${jobId}&apply=true`;
     }
 
     handleJobView(jobId) {
-        // Navigate to job details page
-        window.location.href = `job-details.html?id=${jobId}`;
+    // Navigate to job details page
+    window.location.href = `job-details.html?id=${jobId}`;
     }
 
     handleJobClick(jobId) {
-        // Navigate to job details page
-        window.location.href = `job-details.html?id=${jobId}`;
+    // Navigate to job details page
+    window.location.href = `job-details.html?id=${jobId}`;
     }
 
     handleUploadResume() {
@@ -378,8 +378,8 @@ class Dashboard {
     }
 
     handleBrowseJobs() {
-        // Navigate to jobs page
-        window.location.href = 'jobs.html';
+    // Navigate to jobs page
+    window.location.href = 'jobs.html';
     }
 
     showError(message) {

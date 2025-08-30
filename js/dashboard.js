@@ -76,7 +76,7 @@ class Dashboard {
                     <i data-lucide="briefcase" style="width: 48px; height: 48px; color: var(--gray-400);"></i>
                     <h3>No recommendations yet</h3>
                     <p>Complete your profile and skills assessment to get personalized job recommendations</p>
-                    <a href="pages/profile.html" class="btn btn-primary">Complete Profile</a>
+                    <a href="profile.html" class="btn btn-primary">Complete Profile</a>
                 </div>
             `;
             return;

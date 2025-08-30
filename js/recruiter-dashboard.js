@@ -75,7 +75,11 @@ class RecruiterDashboard {
                     <i data-lucide="briefcase" style="width: 48px; height: 48px; color: var(--gray-400);"></i>
                     <h3>No active jobs</h3>
                     <p>Post your first job to start receiving applications</p>
+<<<<<<< HEAD
                     <a href="post-job.html" class="btn btn-primary">Post New Job</a>
+=======
+                                         <a href="pages/post-job.html" class="btn btn-primary">Post New Job</a>
+>>>>>>> parent of 63b4a88 (Site Locations)
                 </div>
             `;
             return;

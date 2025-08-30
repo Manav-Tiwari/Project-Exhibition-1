@@ -156,7 +156,7 @@ class Dashboard {
                     <i data-lucide="file-text" style="width: 48px; height: 48px; color: var(--gray-400);"></i>
                     <h3>No applications yet</h3>
                     <p>Start applying to jobs to see your application history here</p>
-                    <a href="jobs.html" class="btn btn-primary">Browse Jobs</a>
+                    <a href="pages/jobs.html" class="btn btn-primary">Browse Jobs</a>
                 </div>
             `;
             return;
@@ -359,17 +359,29 @@ class Dashboard {
 
     handleJobApply(jobId) {
         // Navigate to job details page with apply intent
+<<<<<<< HEAD
         window.location.href = `job-details.html?id=${jobId}&apply=true`;
+=======
+        window.location.href = `pages/job-details.html?id=${jobId}&apply=true`;
+>>>>>>> parent of 63b4a88 (Site Locations)
     }
 
     handleJobView(jobId) {
         // Navigate to job details page
+<<<<<<< HEAD
         window.location.href = `job-details.html?id=${jobId}`;
+=======
+        window.location.href = `pages/job-details.html?id=${jobId}`;
+>>>>>>> parent of 63b4a88 (Site Locations)
     }
 
     handleJobClick(jobId) {
         // Navigate to job details page
+<<<<<<< HEAD
         window.location.href = `job-details.html?id=${jobId}`;
+=======
+        window.location.href = `pages/job-details.html?id=${jobId}`;
+>>>>>>> parent of 63b4a88 (Site Locations)
     }
 
     handleUploadResume() {
@@ -379,7 +391,11 @@ class Dashboard {
 
     handleBrowseJobs() {
         // Navigate to jobs page
+<<<<<<< HEAD
         window.location.href = 'jobs.html';
+=======
+        window.location.href = 'pages/jobs.html';
+>>>>>>> parent of 63b4a88 (Site Locations)
     }
 
     showError(message) {

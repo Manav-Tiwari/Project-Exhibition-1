@@ -69,6 +69,59 @@ class ComponentLoader {
         if (sidebarContainer && this.components.has('sidebar')) {
             sidebarContainer.innerHTML = this.components.get('sidebar');
         }
+        
+        // Normalize links inside injected components so they work from
+        // both root (index.html) and pages/* locations.
+        const isInPagesFolder = window.location.pathname.includes('/pages/');
+        this.normalizeComponentLinks(isInPagesFolder);
+    }
+
+    // Adjust anchor hrefs inside header/sidebar after injection so links
+    // resolve correctly whether the current page is inside /pages/ or not.
+    normalizeComponentLinks(isInPagesFolder) {
+        const headerContainer = document.getElementById('header-container');
+        const sidebarContainer = document.getElementById('sidebar-container');
+        const containers = [headerContainer, sidebarContainer].filter(Boolean);
+
+        containers.forEach(container => {
+            const anchors = container.querySelectorAll('a[href]');
+            anchors.forEach(a => {
+                const href = a.getAttribute('href');
+                if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:')) return;
+
+                // Normalize links that intentionally point to the pages folder.
+                // If an anchor was authored as "pages/xxx.html", remove the
+                // prefix when we're already inside /pages/ so it becomes
+                // "xxx.html". When on root, keep "pages/xxx.html".
+                if (href.startsWith('pages/')) {
+                    if (isInPagesFolder) {
+                        a.setAttribute('href', href.replace(/^pages\//, ''));
+                    } else {
+                        a.setAttribute('href', href);
+                    }
+                    return;
+                }
+
+                // Normalize index links: ensure they point to the repo root
+                // (index.html) from root, or to "../index.html" from pages/*.
+                if (href.endsWith('index.html') || href === 'index') {
+                    a.setAttribute('href', isInPagesFolder ? '../index.html' : 'index.html');
+                    return;
+                }
+
+                // If a link is a relative path that begins with "./pages/",
+                // treat it like "pages/..." above.
+                if (href.startsWith('./pages/')) {
+                    const cleaned = href.replace(/^\.\//, '');
+                    if (isInPagesFolder) {
+                        a.setAttribute('href', cleaned.replace(/^pages\//, ''));
+                    } else {
+                        a.setAttribute('href', cleaned);
+                    }
+                    return;
+                }
+            });
+        });
     }
 
     initializeGlobalFeatures() {

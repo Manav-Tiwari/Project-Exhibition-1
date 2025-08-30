@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Research - CareerConnect</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/landing.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    
+    <div class="dashboard-container">
+        <div id="sidebar-container"></div>
+        
+        <main class="main-content">
+            <div class="page-header">
+                <h1>Company Research</h1>
+                <p>Research companies and make informed career decisions</p>
+            </div>
+
+            <!-- Company Search -->
+            <section class="company-search">
+                <div class="section-header">
+                    <h2>Find Companies</h2>
+                    <p>Search for companies by name, industry, or location</p>
+                </div>
+                
+                <form class="company-search-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="companyName">Company Name</label>
+                            <input type="text" id="companyName" name="companyName" placeholder="e.g., Google, Microsoft, Apple">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="industry">Industry</label>
+                            <select id="industry" name="industry">
+                                <option value="">All Industries</option>
+                                <option value="technology">Technology</option>
+                                <option value="finance">Finance</option>
+                                <option value="healthcare">Healthcare</option>
+                                <option value="retail">Retail</option>
+                                <option value="manufacturing">Manufacturing</option>
+                                <option value="consulting">Consulting</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" name="location" placeholder="e.g., San Francisco, New York, Remote">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i data-lucide="search"></i>
+                        Search Companies
+                    </button>
+                </form>
+            </section>
+
+            <!-- Featured Companies -->
+            <section class="company-section">
+                <div class="section-header">
+                    <h2>Featured Companies</h2>
+                    <p>Top companies with open positions</p>
+                </div>
+                
+                <div class="company-cards">
+                    <div class="company-card">
+                        <div class="company-header">
+                            <div class="company-logo">
+                                <i data-lucide="building-2"></i>
+                            </div>
+                            <div class="company-info">
+                                <h3>TechCorp Inc.</h3>
+                                <p class="industry">Technology</p>
+                                <p class="location">📍 San Francisco, CA</p>
+                            </div>
+                            <div class="company-rating">
+                                <span class="rating">4.2</span>
+                                <div class="stars">⭐⭐⭐⭐☆</div>
+                            </div>
+                        </div>
+                        
+                        <div class="company-stats">
+                            <div class="stat">
+                                <span class="label">Size:</span>
+                                <span class="value">500-1000 employees</span>
+                            </div>
+                            <div class="stat">
+                                <span class="label">Founded:</span>
+                                <span class="value">2015</span>
+                            </div>
+                            <div class="stat">
+                                <span class="label">Open Jobs:</span>
+                                <span class="value">12</span>
+                            </div>
+                        </div>
+                        
+                        <div class="company-tags">
+                            <span class="tag">Remote Friendly</span>
+                            <span class="tag">Great Benefits</span>
+                            <span class="tag">Career Growth</span>
+                        </div>
+                        
+                        <div class="company-actions">
+                            <button class="btn btn-primary">View Company</button>
+                            <button class="btn btn-secondary">View Jobs</button>
+                        </div>
+                    </div>
+
+                    <div class="company-card">
+                        <div class="company-header">
+                            <div class="company-logo">
+                                <i data-lucide="building-2"></i>
+                            </div>
+                            <div class="company-info">
+                                <h3>StartupXYZ</h3>
+                                <p class="industry">Technology</p>
+                                <p class="location">📍 New York, NY</p>
+                            </div>
+                            <div class="company-rating">
+                                <span class="rating">4.5</span>
+                                <div class="stars">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                        
+                        <div class="company-stats">
+                            <div class="stat">
+                                <span class="label">Size:</span>
+                                <span class="value">50-200 employees</span>
+                            </div>
+                            <div class="stat">
+                                <span class="label">Founded:</span>
+                                <span class="value">2020</span>
+                            </div>
+                            <div class="stat">
+                                <span class="label">Open Jobs:</span>
+                                <span class="value">8</span>
+                            </div>
+                        </div>
+                        
+                        <div class="company-tags">
+                            <span class="tag">Fast Growing</span>
+                            <span class="tag">Equity</span>
+                            <span class="tag">Flexible Hours</span>
+                        </div>
+                        
+                        <div class="company-actions">
+                            <button class="btn btn-primary">View Company</button>
+                            <button class="btn btn-secondary">View Jobs</button>
+                        </div>
+                    </div>
+
+                    <div class="company-card">
+                        <div class="company-header">
+                            <div class="company-logo">
+                                <i data-lucide="building-2"></i>
+                            </div>
+                            <div class="company-info">
+                                <h3>DesignStudio</h3>
+                                <p class="industry">Creative</p>
+                                <p class="location">📍 Austin, TX</p>
+                            </div>
+                            <div class="company-rating">
+                                <span class="rating">4.0</span>
+                                <div class="stars">⭐⭐⭐⭐☆</div>
+                            </div>
+                        </div>
+                        
+                        <div class="company-stats">
+                            <div class="stat">
+                                <span class="label">Size:</span>
+                                <span class="value">100-500 employees</span>
+                            </div>
+                            <div class="stat">
+                                <span class="label">Founded:</span>
+                                <span class="value">2018</span>
+                            </div>
+                            <div class="stat">
+                                <span class="label">Open Jobs:</span>
+                                <span class="value">5</span>
+                            </div>
+                        </div>
+                        
+                        <div class="company-tags">
+                            <span class="tag">Creative Culture</span>
+                            <span class="tag">Work-Life Balance</span>
+                            <span class="tag">Learning Budget</span>
+                        </div>
+                        
+                        <div class="company-actions">
+                            <button class="btn btn-primary">View Company</button>
+                            <button class="btn btn-secondary">View Jobs</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Company Reviews -->
+            <section class="company-section">
+                <div class="section-header">
+                    <h2>Company Reviews</h2>
+                    <p>Real insights from current and former employees</p>
+                </div>
+                
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <h3>TechCorp Inc.</h3>
+                            <div class="review-rating">
+                                <span class="rating">4.2</span>
+                                <div class="stars">⭐⭐⭐⭐☆</div>
+                            </div>
+                        </div>
+                        
+                        <div class="review-summary">
+                            <div class="pros-cons">
+                                <div class="pros">
+                                    <h4>Pros</h4>
+                                    <ul>
+                                        <li>Great work-life balance</li>
+                                        <li>Competitive salary</li>
+                                        <li>Remote work options</li>
+                                    </ul>
+                                </div>
+                                <div class="cons">
+                                    <h4>Cons</h4>
+                                    <ul>
+                                        <li>Sometimes slow decision making</li>
+                                        <li>Limited career growth</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="review-meta">
+                            <span class="reviewer">Software Engineer</span>
+                            <span class="review-date">2 months ago</span>
+                        </div>
+                        
+                        <button class="btn btn-outline">Read Full Review</button>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <h3>StartupXYZ</h3>
+                            <div class="review-rating">
+                                <span class="rating">4.5</span>
+                                <div class="stars">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                        
+                        <div class="review-summary">
+                            <div class="pros-cons">
+                                <div class="pros">
+                                    <h4>Pros</h4>
+                                    <ul>
+                                        <li>Fast-paced environment</li>
+                                        <li>Great team culture</li>
+                                        <li>Equity compensation</li>
+                                    </ul>
+                                </div>
+                                <div class="cons">
+                                    <h4>Cons</h4>
+                                    <ul>
+                                        <li>Long hours sometimes</li>
+                                        <li>Uncertain future</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="review-meta">
+                            <span class="reviewer">Product Manager</span>
+                            <span class="review-date">1 month ago</span>
+                        </div>
+                        
+                        <button class="btn btn-outline">Read Full Review</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Industry Insights -->
+            <section class="company-section">
+                <div class="section-header">
+                    <h2>Industry Insights</h2>
+                    <p>Market trends and company performance by industry</p>
+                </div>
+                
+                <div class="industry-insights">
+                    <div class="insight-card">
+                        <div class="insight-header">
+                            <h3>Technology</h3>
+                            <span class="trend up">Growing</span>
+                        </div>
+                        <div class="insight-stats">
+                            <div class="stat">
+                                <span class="label">Market Growth:</span>
+                                <span class="value up">+12.5%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="label">Top Companies:</span>
+                                <span class="value">Google, Microsoft, Apple</span>
+                            </div>
+                            <div class="stat">
+                                <span class="label">Salary Range:</span>
+                                <span class="value">$80k - $200k</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline">Learn More</button>
+                    </div>
+
+                    <div class="insight-card">
+                        <div class="insight-header">
+                            <h3>Finance</h3>
+                            <span class="trend stable">Stable</span>
+                        </div>
+                        <div class="insight-stats">
+                            <div class="stat">
+                                <span class="label">Market Growth:</span>
+                                <span class="value stable">+3.2%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="label">Top Companies:</span>
+                                <span class="value">JPMorgan, Goldman Sachs</span>
+                            </div>
+                            <div class="stat">
+                                <span class="label">Salary Range:</span>
+                                <span class="value">$70k - $180k</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline">Learn More</button>
+                    </div>
+
+                    <div class="insight-card">
+                        <div class="insight-header">
+                            <h3>Healthcare</h3>
+                            <span class="trend up">Growing</span>
+                        </div>
+                        <div class="insight-stats">
+                            <div class="stat">
+                                <span class="label">Market Growth:</span>
+                                <span class="value up">+8.7%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="label">Top Companies:</span>
+                                <span class="value">UnitedHealth, CVS Health</span>
+                            </div>
+                            <div class="stat">
+                                <span class="label">Salary Range:</span>
+                                <span class="value">$60k - $150k</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline">Learn More</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Tools -->
+            <section class="company-section">
+                <div class="section-header">
+                    <h2>Research Tools</h2>
+                    <p>Tools to help you research companies effectively</p>
+                </div>
+                
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i data-lucide="bar-chart-3"></i>
+                        </div>
+                        <h3>Company Comparison</h3>
+                        <p>Compare multiple companies side by side on key metrics like salary, benefits, and culture.</p>
+                        <button class="btn btn-primary">Compare Companies</button>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i data-lucide="trending-up"></i>
+                        </div>
+                        <h3>Market Analysis</h3>
+                        <p>Get detailed market analysis and trends for specific industries and company sizes.</p>
+                        <button class="btn btn-primary">Analyze Market</button>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <h3>Employee Network</h3>
+                        <p>Connect with current and former employees to get insider information about companies.</p>
+                        <button class="btn btn-primary">Connect</button>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i data-lucide="book-open"></i>
+                        </div>
+                        <h3>Company Reports</h3>
+                        <p>Access comprehensive company reports including financials, culture, and growth metrics.</p>
+                        <button class="btn btn-primary">View Reports</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Company search form
+        document.querySelector('.company-search-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const companyName = document.getElementById('companyName').value;
+            const industry = document.getElementById('industry').value;
+            const location = document.getElementById('location').value;
+            
+            if (companyName || industry || location) {
+                alert(`Searching for companies: ${companyName || 'Any name'}${industry ? ` in ${industry} industry` : ''}${location ? ` in ${location}` : ''}`);
+            } else {
+                alert('Please enter at least one search criteria.');
+            }
+        });
+
+        // Company card actions
+        document.querySelectorAll('.company-actions .btn-primary').forEach(button => {
+            button.addEventListener('click', function() {
+                const companyName = this.closest('.company-card').querySelector('h3').textContent;
+                alert(`Viewing company profile: ${companyName}`);
+            });
+        });
+
+        document.querySelectorAll('.company-actions .btn-secondary').forEach(button => {
+            button.addEventListener('click', function() {
+                const companyName = this.closest('.company-card').querySelector('h3').textContent;
+                alert(`Viewing jobs at: ${companyName}`);
+            });
+        });
+
+        // Review interactions
+        document.querySelectorAll('.review-card .btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const companyName = this.closest('.review-card').querySelector('h3').textContent;
+                alert(`Reading full review for: ${companyName}`);
+            });
+        });
+
+        // Industry insights
+        document.querySelectorAll('.insight-card .btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const industryName = this.closest('.insight-card').querySelector('h3').textContent;
+                alert(`Learning more about: ${industryName} industry`);
+            });
+        });
+
+        // Research tools
+        document.querySelectorAll('.tool-card .btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const toolName = this.closest('.tool-card').querySelector('h3').textContent;
+                alert(`Opening tool: ${toolName}`);
+            });
+        });
+    </script>
+</body>
+</html>

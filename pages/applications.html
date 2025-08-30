@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Applications - ResumeBERT</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    <div id="sidebar-container"></div>
+    
+    <main class="main-content">
+        <div class="page-header">
+            <h1>My Applications</h1>
+            <p>Track the status of your job applications and manage your career progress</p>
+        </div>
+
+        <div class="applications-container">
+            <!-- Applications Overview -->
+            <div class="applications-overview">
+                <div class="overview-card">
+                    <div class="overview-icon">
+                        <i data-lucide="file-text"></i>
+                    </div>
+                    <div class="overview-content">
+                        <h3>12</h3>
+                        <p>Total Applications</p>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">
+                        <i data-lucide="clock"></i>
+                    </div>
+                    <div class="overview-content">
+                        <h3>5</h3>
+                        <p>Pending Review</p>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">
+                        <i data-lucide="message-circle"></i>
+                    </div>
+                    <div class="overview-content">
+                        <h3>3</h3>
+                        <p>Interviews Scheduled</p>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">
+                        <i data-lucide="check-circle"></i>
+                    </div>
+                    <div class="overview-content">
+                        <h3>2</h3>
+                        <p>Offers Received</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Applications Filters -->
+            <div class="applications-filters">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-status="all">
+                        All Applications
+                    </button>
+                    <button class="filter-tab" data-status="pending">
+                        Pending Review
+                    </button>
+                    <button class="filter-tab" data-status="interviewing">
+                        Interviewing
+                    </button>
+                    <button class="filter-tab" data-status="offered">
+                        Offers
+                    </button>
+                    <button class="filter-tab" data-status="rejected">
+                        Rejected
+                    </button>
+                </div>
+                
+                <div class="filter-actions">
+                    <div class="search-filter">
+                        <i data-lucide="search"></i>
+                        <input type="text" placeholder="Search applications..." class="search-input">
+                    </div>
+                    <select class="sort-select">
+                        <option value="date">Date Applied</option>
+                        <option value="company">Company</option>
+                        <option value="status">Status</option>
+                        <option value="match">Match Score</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Applications List -->
+            <div class="applications-list" id="applications-list">
+                <!-- Applications will be populated by JavaScript -->
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state" id="empty-state" style="display: none;">
+                <div class="empty-icon">
+                    <i data-lucide="file-text"></i>
+                </div>
+                <h3>No applications found</h3>
+                <p>Start applying to jobs to see your applications here</p>
+                <a href="jobs.html" class="btn btn-primary">
+                    <i data-lucide="briefcase"></i>
+                    Browse Jobs
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Application Details Modal -->
+    <div class="modal" id="application-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-application-title">Application Details</h2>
+                <button class="modal-close" type="button" id="modal-close">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="application-details">
+                    <div class="job-info">
+                        <h3 id="modal-job-title">Senior Frontend Developer</h3>
+                        <p id="modal-company-name">TechCorp Inc.</p>
+                        <div class="job-meta">
+                            <span><i data-lucide="map-pin"></i> <span id="modal-location">San Francisco, CA</span></span>
+                            <span><i data-lucide="dollar-sign"></i> <span id="modal-salary">$120,000 - $150,000</span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="application-timeline">
+                        <h4>Application Timeline</h4>
+                        <div class="timeline" id="application-timeline">
+                            <!-- Timeline will be populated -->
+                        </div>
+                    </div>
+                    
+                    <div class="application-actions">
+                        <h4>Actions</h4>
+                        <div class="action-buttons">
+                            <button class="btn btn-outline">
+                                <i data-lucide="download"></i>
+                                Download Application
+                            </button>
+                            <button class="btn btn-outline">
+                                <i data-lucide="edit"></i>
+                                Update Application
+                            </button>
+                            <button class="btn btn-outline">
+                                <i data-lucide="message-circle"></i>
+                                Contact Recruiter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../js/main.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Sample applications data
+        const sampleApplications = [
+            {
+                id: 1,
+                jobTitle: "Senior Frontend Developer",
+                company: "TechCorp Inc.",
+                location: "San Francisco, CA",
+                salary: "$120,000 - $150,000",
+                appliedDate: "2024-01-15",
+                status: "interviewing",
+                statusText: "Interviewing",
+                matchScore: 95,
+                companyLogo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=60&h=60&fit=crop",
+                lastUpdate: "2 days ago",
+                timeline: [
+                    { date: "2024-01-15", event: "Application Submitted", status: "completed" },
+                    { date: "2024-01-18", event: "Application Reviewed", status: "completed" },
+                    { date: "2024-01-20", event: "Phone Interview Scheduled", status: "completed" },
+                    { date: "2024-01-25", event: "Technical Interview", status: "upcoming" }
+                ]
+            },
+            {
+                id: 2,
+                jobTitle: "Full Stack Engineer",
+                company: "StartupXYZ",
+                location: "Remote",
+                salary: "$90,000 - $130,000",
+                appliedDate: "2024-01-10",
+                status: "pending",
+                statusText: "Pending Review",
+                matchScore: 87,
+                companyLogo: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=60&h=60&fit=crop",
+                lastUpdate: "1 week ago",
+                timeline: [
+                    { date: "2024-01-10", event: "Application Submitted", status: "completed" }
+                ]
+            },
+            {
+                id: 3,
+                jobTitle: "Frontend Developer",
+                company: "Digital Solutions",
+                location: "New York, NY",
+                salary: "$80,000 - $110,000",
+                appliedDate: "2024-01-05",
+                status: "offered",
+                statusText: "Offer Received",
+                matchScore: 92,
+                companyLogo: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=60&h=60&fit=crop",
+                lastUpdate: "3 days ago",
+                timeline: [
+                    { date: "2024-01-05", event: "Application Submitted", status: "completed" },
+                    { date: "2024-01-08", event: "Application Reviewed", status: "completed" },
+                    { date: "2024-01-12", event: "Technical Interview", status: "completed" },
+                    { date: "2024-01-15", event: "Final Interview", status: "completed" },
+                    { date: "2024-01-18", event: "Offer Extended", status: "completed" }
+                ]
+            }
+        ];
+        
+        // Status colors and icons
+        const statusConfig = {
+            pending: { color: '#f59e0b', icon: 'clock' },
+            interviewing: { color: '#3b82f6', icon: 'message-circle' },
+            offered: { color: '#10b981', icon: 'check-circle' },
+            rejected: { color: '#ef4444', icon: 'x-circle' }
+        };
+        
+        // Populate applications list
+        function populateApplications(filterStatus = 'all') {
+            const applicationsList = document.getElementById('applications-list');
+            const emptyState = document.getElementById('empty-state');
+            
+            let filteredApplications = sampleApplications;
+            if (filterStatus !== 'all') {
+                filteredApplications = sampleApplications.filter(app => app.status === filterStatus);
+            }
+            
+            if (filteredApplications.length === 0) {
+                applicationsList.style.display = 'none';
+                emptyState.style.display = 'block';
+                return;
+            }
+            
+            applicationsList.style.display = 'block';
+            emptyState.style.display = 'none';
+            applicationsList.innerHTML = '';
+            
+            filteredApplications.forEach(app => {
+                const statusConfig = statusConfig[app.status];
+                const applicationCard = document.createElement('div');
+                applicationCard.className = 'application-card';
+                applicationCard.innerHTML = `
+                    <div class="application-header">
+                        <img src="${app.companyLogo}" alt="${app.company}" class="company-logo">
+                        <div class="application-info">
+                            <h3 class="job-title">${app.jobTitle}</h3>
+                            <p class="company-name">${app.company}</p>
+                            <div class="application-meta">
+                                <span class="location"><i data-lucide="map-pin"></i> ${app.location}</span>
+                                <span class="salary"><i data-lucide="dollar-sign"></i> ${app.salary}</span>
+                                <span class="applied-date"><i data-lucide="calendar"></i> Applied ${formatDate(app.appliedDate)}</span>
+                            </div>
+                        </div>
+                        <div class="application-status">
+                            <div class="status-badge" style="background-color: ${statusConfig.color}20; color: ${statusConfig.color}">
+                                <i data-lucide="${statusConfig.icon}"></i>
+                                ${app.statusText}
+                            </div>
+                            <div class="match-score">
+                                <span class="score">${app.matchScore}%</span>
+                                <span class="label">Match</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="application-body">
+                        <div class="application-actions">
+                            <button class="btn btn-outline btn-sm" onclick="viewApplicationDetails(${app.id})">
+                                <i data-lucide="eye"></i>
+                                View Details
+                            </button>
+                            <button class="btn btn-outline btn-sm">
+                                <i data-lucide="message-circle"></i>
+                                Contact
+                            </button>
+                            <button class="btn btn-outline btn-sm">
+                                <i data-lucide="edit"></i>
+                                Update
+                            </button>
+                        </div>
+                        <div class="last-update">
+                            <i data-lucide="clock"></i>
+                            Last updated: ${app.lastUpdate}
+                        </div>
+                    </div>
+                `;
+                applicationsList.appendChild(applicationCard);
+            });
+        }
+        
+        // Format date
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', { 
+                month: 'short', 
+                day: 'numeric', 
+                year: 'numeric' 
+            });
+        }
+        
+        // View application details
+        function viewApplicationDetails(appId) {
+            const app = sampleApplications.find(a => a.id === appId);
+            if (!app) return;
+            
+            document.getElementById('modal-job-title').textContent = app.jobTitle;
+            document.getElementById('modal-company-name').textContent = app.company;
+            document.getElementById('modal-location').textContent = app.location;
+            document.getElementById('modal-salary').textContent = app.salary;
+            
+            // Populate timeline
+            const timeline = document.getElementById('application-timeline');
+            timeline.innerHTML = app.timeline.map(item => `
+                <div class="timeline-item ${item.status}">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">${formatDate(item.date)}</div>
+                        <div class="timeline-event">${item.event}</div>
+                    </div>
+                </div>
+            `).join('');
+            
+            document.getElementById('application-modal').style.display = 'flex';
+        }
+        
+        // Filter tabs functionality
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                // Filter applications
+                const status = tab.dataset.status;
+                populateApplications(status);
+            });
+        });
+        
+        // Close modal
+        document.getElementById('modal-close').addEventListener('click', () => {
+            document.getElementById('application-modal').style.display = 'none';
+        });
+        
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            populateApplications();
+        });
+    </script>
+</body>
+</html>

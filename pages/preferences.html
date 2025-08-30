@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferences - CareerConnect</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/landing.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    
+    <div class="dashboard-container">
+        <div id="sidebar-container"></div>
+        
+        <main class="main-content">
+            <div class="page-header">
+                <h1>Preferences</h1>
+                <p>Customize your experience and job search preferences</p>
+            </div>
+
+            <!-- Job Preferences -->
+            <section class="preferences-section">
+                <div class="section-header">
+                    <h2>Job Preferences</h2>
+                    <p>Set your ideal job criteria and requirements</p>
+                </div>
+                
+                <form class="preferences-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="jobTitle">Preferred Job Titles</label>
+                            <input type="text" id="jobTitle" name="jobTitle" placeholder="e.g., Frontend Developer, Software Engineer">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="location">Preferred Locations</label>
+                            <input type="text" id="location" name="location" placeholder="e.g., San Francisco, Remote, New York">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="salaryMin">Minimum Salary</label>
+                            <input type="number" id="salaryMin" name="salaryMin" placeholder="50000">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="salaryMax">Maximum Salary</label>
+                            <input type="number" id="salaryMax" name="salaryMax" placeholder="150000">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="experienceLevel">Experience Level</label>
+                            <select id="experienceLevel" name="experienceLevel">
+                                <option value="">Select Level</option>
+                                <option value="entry">Entry Level (0-2 years)</option>
+                                <option value="mid">Mid Level (3-5 years)</option>
+                                <option value="senior">Senior Level (6-10 years)</option>
+                                <option value="lead">Lead/Manager (10+ years)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="jobType">Job Type</label>
+                            <select id="jobType" name="jobType">
+                                <option value="">Select Type</option>
+                                <option value="full-time">Full Time</option>
+                                <option value="part-time">Part Time</option>
+                                <option value="contract">Contract</option>
+                                <option value="freelance">Freelance</option>
+                                <option value="internship">Internship</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="industries">Preferred Industries</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="industries" value="technology">
+                                <span class="checkmark"></span>
+                                Technology
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="industries" value="finance">
+                                <span class="checkmark"></span>
+                                Finance
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="industries" value="healthcare">
+                                <span class="checkmark"></span>
+                                Healthcare
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="industries" value="education">
+                                <span class="checkmark"></span>
+                                Education
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="industries" value="ecommerce">
+                                <span class="checkmark"></span>
+                                E-commerce
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="industries" value="startup">
+                                <span class="checkmark"></span>
+                                Startup
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="skills">Required Skills</label>
+                        <input type="text" id="skills" name="skills" placeholder="e.g., React, Node.js, Python (comma-separated)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="workStyle">Work Style Preferences</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="workStyle" value="remote">
+                                <span class="checkmark"></span>
+                                Remote Work
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="workStyle" value="hybrid">
+                                <span class="checkmark"></span>
+                                Hybrid
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="workStyle" value="onsite">
+                                <span class="checkmark"></span>
+                                On-site
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="workStyle" value="flexible">
+                                <span class="checkmark"></span>
+                                Flexible Hours
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Save Preferences</button>
+                        <button type="button" class="btn btn-secondary">Reset to Default</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Notification Preferences -->
+            <section class="preferences-section">
+                <div class="section-header">
+                    <h2>Notification Preferences</h2>
+                    <p>Choose how and when you want to be notified</p>
+                </div>
+                
+                <div class="notification-settings">
+                    <div class="notification-item">
+                        <div class="notification-info">
+                            <h3>Job Matches</h3>
+                            <p>Get notified when new jobs match your preferences</p>
+                        </div>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="jobMatches" checked>
+                            <label for="jobMatches"></label>
+                        </div>
+                    </div>
+                    
+                    <div class="notification-item">
+                        <div class="notification-info">
+                            <h3>Application Updates</h3>
+                            <p>Receive updates on your job applications</p>
+                        </div>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="applicationUpdates" checked>
+                            <label for="applicationUpdates"></label>
+                        </div>
+                    </div>
+                    
+                    <div class="notification-item">
+                        <div class="notification-info">
+                            <h3>Interview Reminders</h3>
+                            <p>Get reminded about upcoming interviews</p>
+                        </div>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="interviewReminders" checked>
+                            <label for="interviewReminders"></label>
+                        </div>
+                    </div>
+                    
+                    <div class="notification-item">
+                        <div class="notification-info">
+                            <h3>Skill Recommendations</h3>
+                            <p>Receive personalized skill development suggestions</p>
+                        </div>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="skillRecommendations">
+                            <label for="skillRecommendations"></label>
+                        </div>
+                    </div>
+                    
+                    <div class="notification-item">
+                        <div class="notification-info">
+                            <h3>Career Insights</h3>
+                            <p>Get weekly career tips and market insights</p>
+                        </div>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="careerInsights">
+                            <label for="careerInsights"></label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="notification-frequency">
+                    <h3>Notification Frequency</h3>
+                    <div class="radio-group">
+                        <label class="radio-item">
+                            <input type="radio" name="frequency" value="immediate" checked>
+                            <span class="radio-mark"></span>
+                            Immediate
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="frequency" value="daily">
+                            <span class="radio-mark"></span>
+                            Daily Digest
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="frequency" value="weekly">
+                            <span class="radio-mark"></span>
+                            Weekly Summary
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Privacy & Security -->
+            <section class="preferences-section">
+                <div class="section-header">
+                    <h2>Privacy & Security</h2>
+                    <p>Control your data and account security</p>
+                </div>
+                
+                <div class="privacy-settings">
+                    <div class="privacy-item">
+                        <div class="privacy-info">
+                            <h3>Profile Visibility</h3>
+                            <p>Control who can see your profile information</p>
+                        </div>
+                        <select class="privacy-select">
+                            <option value="public">Public</option>
+                            <option value="recruiters">Recruiters Only</option>
+                            <option value="private">Private</option>
+                        </select>
+                    </div>
+                    
+                    <div class="privacy-item">
+                        <div class="privacy-info">
+                            <h3>Contact Information</h3>
+                            <p>Choose what contact info to display</p>
+                        </div>
+                        <select class="privacy-select">
+                            <option value="email">Email Only</option>
+                            <option value="phone">Phone Only</option>
+                            <option value="both">Both</option>
+                            <option value="none">None</option>
+                        </select>
+                    </div>
+                    
+                    <div class="privacy-item">
+                        <div class="privacy-info">
+                            <h3>Search Engine Indexing</h3>
+                            <p>Allow search engines to index your profile</p>
+                        </div>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="searchIndexing">
+                            <label for="searchIndexing"></label>
+                        </div>
+                    </div>
+                    
+                    <div class="privacy-item">
+                        <div class="privacy-info">
+                            <h3>Data Analytics</h3>
+                            <p>Help improve our services with anonymous data</p>
+                        </div>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="dataAnalytics" checked>
+                            <label for="dataAnalytics"></label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="security-actions">
+                    <button class="btn btn-outline">Change Password</button>
+                    <button class="btn btn-outline">Enable Two-Factor Authentication</button>
+                    <button class="btn btn-outline">Download My Data</button>
+                    <button class="btn btn-danger">Delete Account</button>
+                </div>
+            </section>
+
+            <!-- Language & Region -->
+            <section class="preferences-section">
+                <div class="section-header">
+                    <h2>Language & Region</h2>
+                    <p>Set your preferred language and regional settings</p>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="language">Language</label>
+                        <select id="language" name="language">
+                            <option value="en">English</option>
+                            <option value="es">Spanish</option>
+                            <option value="fr">French</option>
+                            <option value="de">German</option>
+                            <option value="zh">Chinese</option>
+                            <option value="ja">Japanese</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="timezone">Timezone</label>
+                        <select id="timezone" name="timezone">
+                            <option value="pst">Pacific Time (PST/PDT)</option>
+                            <option value="mst">Mountain Time (MST/MDT)</option>
+                            <option value="cst">Central Time (CST/CDT)</option>
+                            <option value="est">Eastern Time (EST/EDT)</option>
+                            <option value="utc">UTC</option>
+                            <option value="gmt">GMT</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="currency">Currency</label>
+                    <select id="currency" name="currency">
+                        <option value="usd">USD ($)</option>
+                        <option value="eur">EUR (€)</option>
+                        <option value="gbp">GBP (£)</option>
+                        <option value="jpy">JPY (¥)</option>
+                        <option value="cad">CAD (C$)</option>
+                        <option value="aud">AUD (A$)</option>
+                    </select>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Form submission
+        document.querySelector('.preferences-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Preferences saved successfully!');
+        });
+
+        // Reset preferences
+        document.querySelector('button[type="button"]').addEventListener('click', function() {
+            if (confirm('Are you sure you want to reset all preferences to default?')) {
+                this.closest('form').reset();
+                alert('Preferences reset to default!');
+            }
+        });
+
+        // Toggle switch functionality
+        document.querySelectorAll('.toggle-switch input').forEach(toggle => {
+            toggle.addEventListener('change', function() {
+                const settingName = this.id;
+                const isEnabled = this.checked;
+                console.log(`${settingName}: ${isEnabled ? 'enabled' : 'disabled'}`);
+            });
+        });
+
+        // Privacy settings changes
+        document.querySelectorAll('.privacy-select').forEach(select => {
+            select.addEventListener('change', function() {
+                const settingName = this.previousElementSibling.querySelector('h3').textContent;
+                const value = this.value;
+                console.log(`${settingName}: ${value}`);
+            });
+        });
+
+        // Security actions
+        document.querySelectorAll('.security-actions .btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const action = this.textContent;
+                if (action === 'Delete Account') {
+                    if (confirm('Are you sure you want to delete your account? This action cannot be undone.')) {
+                        alert('Account deletion requested. Please check your email for confirmation.');
+                    }
+                } else {
+                    alert(`${action} - This feature will be implemented soon.`);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

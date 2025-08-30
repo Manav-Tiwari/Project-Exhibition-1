@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ResumeBERT</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    <div id="sidebar-container"></div>
+    
+    <main class="main-content">
+        <div class="dashboard-header">
+            <div class="welcome-section">
+                <h1>Welcome back, Manav!</h1>
+                <p>Here's what's happening with your job search today</p>
+            </div>
+            <div class="quick-actions">
+                <button class="btn btn-primary">
+                    <i data-lucide="plus"></i>
+                    Upload Resume
+                </button>
+                <button class="btn btn-outline">
+                    <i data-lucide="search"></i>
+                    Browse Jobs
+                </button>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <!-- Stats Overview -->
+            <div class="stats-overview">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i data-lucide="file-text"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="total-applications">12</h3>
+                        <p>Total Applications</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i data-lucide="calendar"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="interviews-scheduled">3</h3>
+                        <p>Interviews Scheduled</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i data-lucide="target"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="average-match-score">87%</h3>
+                        <p>Average Match Score</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i data-lucide="eye"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="profile-views">24</h3>
+                        <p>Profile Views</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Job Recommendations -->
+            <div class="recommendations-section">
+                <div class="section-header">
+                    <h2>AI-Powered Job Recommendations</h2>
+                    <p>Based on your skills, experience, and preferences</p>
+                </div>
+                <div class="recommendations-grid" id="recommended-jobs-list">
+                    <!-- Job recommendations will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Skills Analysis Chart -->
+            <div class="skills-analysis-section">
+                <div class="section-header">
+                    <h2>Skills Analysis</h2>
+                    <p>How your skills compare to market demand</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="skills-chart"></canvas>
+                </div>
+            </div>
+
+            <!-- Recent Applications -->
+            <div class="recent-applications-section">
+                <div class="section-header">
+                    <h2>Recent Applications</h2>
+                    <a href="applications.html" class="view-all-link">View All</a>
+                </div>
+                <div class="applications-list" id="recent-applications-list">
+                    <!-- Recent applications will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Market Insights -->
+            <div class="market-insights-section">
+                <div class="section-header">
+                    <h2>Market Insights</h2>
+                    <p>Stay ahead with industry trends</p>
+                </div>
+                <div class="insights-grid">
+                    <div class="insight-card">
+                        <div class="insight-icon">
+                            <i data-lucide="trending-up"></i>
+                        </div>
+                        <div class="insight-content">
+                            <h4>Frontend Development</h4>
+                            <p>High demand for React developers</p>
+                            <span class="insight-trend positive">+15% growth</span>
+                        </div>
+                    </div>
+                    <div class="insight-card">
+                        <div class="insight-icon">
+                            <i data-lucide="dollar-sign"></i>
+                        </div>
+                        <div class="insight-content">
+                            <h4>Salary Range</h4>
+                            <p>Your experience level: $80K-$120K</p>
+                            <span class="insight-trend positive">Above average</span>
+                        </div>
+                    </div>
+                    <div class="insight-card">
+                        <div class="insight-icon">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <div class="insight-content">
+                            <h4>Location Demand</h4>
+                            <p>San Francisco: High demand</p>
+                            <span class="insight-trend positive">Excellent</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions-section">
+                <div class="section-header">
+                    <h2>Quick Actions</h2>
+                </div>
+                <div class="actions-grid">
+                    <a href="profile.html" class="action-card">
+                        <div class="action-icon">
+                            <i data-lucide="edit"></i>
+                        </div>
+                        <h4>Update Profile</h4>
+                        <p>Keep your information current</p>
+                    </a>
+                    <a href="skills.html" class="action-card">
+                        <div class="action-icon">
+                            <i data-lucide="target"></i>
+                        </div>
+                        <h4>Skills Assessment</h4>
+                        <p>Test and improve your skills</p>
+                    </a>
+                    <a href="resume.html" class="action-card">
+                        <div class="action-icon">
+                            <i data-lucide="file-text"></i>
+                        </div>
+                        <h4>Resume Builder</h4>
+                        <p>Create a standout resume</p>
+                    </a>
+                    <a href="preferences.html" class="action-card">
+                        <div class="action-icon">
+                            <i data-lucide="settings"></i>
+                        </div>
+                        <h4>Job Preferences</h4>
+                        <p>Customize your job matches</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/dashboard.js"></script>
+</body>
+</html>

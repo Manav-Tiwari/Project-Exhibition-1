@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicants - ResumeBERT</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/recruiter-dashboard.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    <div id="sidebar-container"></div>
+    
+    <main class="main-content">
+        <div class="page-header">
+            <h1>Applicants</h1>
+            <p>Review and manage job candidates for your open positions</p>
+        </div>
+
+        <div class="applicants-container">
+            <!-- Applicants Overview -->
+            <div class="applicants-overview">
+                <div class="overview-card">
+                    <div class="overview-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <div class="overview-content">
+                        <h3>156</h3>
+                        <p>Total Applicants</p>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">
+                        <i data-lucide="clock"></i>
+                    </div>
+                    <div class="overview-content">
+                        <h3>89</h3>
+                        <p>New This Week</p>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">
+                        <i data-lucide="star"></i>
+                    </div>
+                    <div class="overview-content">
+                        <h3>23</h3>
+                        <p>Top Matches</p>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">
+                        <i data-lucide="check-circle"></i>
+                    </div>
+                    <div class="overview-content">
+                        <h3>12</h3>
+                        <p>Interviews Scheduled</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters and Search -->
+            <div class="applicants-filters">
+                <div class="filter-section">
+                    <div class="filter-group">
+                        <label>Job Position</label>
+                        <select class="filter-select" id="job-filter">
+                            <option value="">All Positions</option>
+                            <option value="frontend">Frontend Developer</option>
+                            <option value="backend">Backend Developer</option>
+                            <option value="fullstack">Full Stack Engineer</option>
+                            <option value="designer">UI/UX Designer</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Experience Level</label>
+                        <select class="filter-select" id="experience-filter">
+                            <option value="">All Levels</option>
+                            <option value="entry">Entry Level</option>
+                            <option value="mid">Mid Level</option>
+                            <option value="senior">Senior Level</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Match Score</label>
+                        <select class="filter-select" id="match-filter">
+                            <option value="">Any Score</option>
+                            <option value="90+">90%+</option>
+                            <option value="80+">80%+</option>
+                            <option value="70+">70%+</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Status</label>
+                        <select class="filter-select" id="status-filter">
+                            <option value="">All Statuses</option>
+                            <option value="new">New</option>
+                            <option value="reviewed">Reviewed</option>
+                            <option value="shortlisted">Shortlisted</option>
+                            <option value="interviewing">Interviewing</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="search-section">
+                    <div class="search-input-wrapper">
+                        <i data-lucide="search" class="search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Search applicants by name, skills, or company...">
+                        <button class="search-btn" type="button">Search</button>
+                    </div>
+                    
+                    <button class="btn btn-outline filter-reset-btn">
+                        <i data-lucide="refresh-cw"></i>
+                        Reset Filters
+                    </button>
+                </div>
+            </div>
+
+            <!-- Applicants List -->
+            <div class="applicants-list" id="applicants-list">
+                <!-- Applicants will be populated by JavaScript -->
+            </div>
+
+            <!-- Bulk Actions -->
+            <div class="bulk-actions" id="bulk-actions" style="display: none;">
+                <div class="bulk-info">
+                    <span id="selected-count">0</span> applicants selected
+                </div>
+                <div class="bulk-buttons">
+                    <button class="btn btn-outline">
+                        <i data-lucide="eye"></i>
+                        Mark as Reviewed
+                    </button>
+                    <button class="btn btn-outline">
+                        <i data-lucide="star"></i>
+                        Shortlist
+                    </button>
+                    <button class="btn btn-outline">
+                        <i data-lucide="calendar"></i>
+                        Schedule Interview
+                    </button>
+                    <button class="btn btn-outline">
+                        <i data-lucide="x"></i>
+                        Reject
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Applicant Details Modal -->
+    <div class="modal" id="applicant-modal">
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h2 id="modal-applicant-name">Applicant Details</h2>
+                <button class="modal-close" type="button" id="modal-close">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="applicant-profile">
+                    <div class="profile-header">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" 
+                             alt="Applicant Avatar" class="applicant-avatar">
+                        <div class="profile-info">
+                            <h3 id="modal-name">John Doe</h3>
+                            <p id="modal-title">Senior Frontend Developer</p>
+                            <p id="modal-location">San Francisco, CA</p>
+                            <div class="profile-stats">
+                                <div class="stat">
+                                    <span class="stat-value" id="modal-match-score">92%</span>
+                                    <span class="stat-label">Match Score</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value" id="modal-experience">5 years</span>
+                                    <span class="stat-label">Experience</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-actions">
+                            <button class="btn btn-primary">
+                                <i data-lucide="calendar"></i>
+                                Schedule Interview
+                            </button>
+                            <button class="btn btn-outline">
+                                <i data-lucide="mail"></i>
+                                Send Message
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-content">
+                        <div class="profile-section">
+                            <h4>Skills & Expertise</h4>
+                            <div class="skills-grid" id="modal-skills">
+                                <!-- Skills will be populated -->
+                            </div>
+                        </div>
+                        
+                        <div class="profile-section">
+                            <h4>Work Experience</h4>
+                            <div class="experience-list" id="modal-experience">
+                                <!-- Experience will be populated -->
+                            </div>
+                        </div>
+                        
+                        <div class="profile-section">
+                            <h4>Education</h4>
+                            <div class="education-list" id="modal-education">
+                                <!-- Education will be populated -->
+                            </div>
+                        </div>
+                        
+                        <div class="profile-section">
+                            <h4>Application Details</h4>
+                            <div class="application-details">
+                                <div class="detail-item">
+                                    <label>Applied Date:</label>
+                                    <span id="modal-applied-date">January 15, 2024</span>
+                                </div>
+                                <div class="detail-item">
+                                    <label>Resume:</label>
+                                    <a href="#" class="download-link">
+                                        <i data-lucide="download"></i>
+                                        Download Resume
+                                    </a>
+                                </div>
+                                <div class="detail-item">
+                                    <label>Cover Letter:</label>
+                                    <p id="modal-cover-letter">I am excited to apply for the Senior Frontend Developer position...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../js/main.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Sample applicants data
+        const sampleApplicants = [
+            {
+                id: 1,
+                name: "John Doe",
+                title: "Senior Frontend Developer",
+                location: "San Francisco, CA",
+                experience: "5 years",
+                matchScore: 92,
+                status: "new",
+                statusText: "New",
+                appliedDate: "2024-01-15",
+                avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop",
+                skills: ["React", "TypeScript", "Node.js", "AWS", "Docker"],
+                experience: [
+                    { company: "TechCorp Inc.", role: "Senior Frontend Developer", duration: "2022 - Present" },
+                    { company: "StartupXYZ", role: "Frontend Developer", duration: "2020 - 2022" }
+                ],
+                education: "BS Computer Science, UC Berkeley",
+                coverLetter: "I am excited to apply for the Senior Frontend Developer position..."
+            },
+            {
+                id: 2,
+                name: "Sarah Johnson",
+                title: "Full Stack Engineer",
+                location: "New York, NY",
+                experience: "3 years",
+                matchScore: 87,
+                status: "reviewed",
+                statusText: "Reviewed",
+                appliedDate: "2024-01-12",
+                avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop",
+                skills: ["Vue.js", "Python", "Django", "PostgreSQL", "Git"],
+                experience: [
+                    { company: "Digital Solutions", role: "Full Stack Engineer", duration: "2021 - Present" }
+                ],
+                education: "MS Software Engineering, NYU",
+                coverLetter: "I am passionate about building scalable web applications..."
+            }
+        ];
+        
+        // Status colors
+        const statusColors = {
+            new: '#3b82f6',
+            reviewed: '#f59e0b',
+            shortlisted: '#10b981',
+            interviewing: '#8b5cf6',
+            rejected: '#ef4444'
+        };
+        
+        // Populate applicants list
+        function populateApplicants() {
+            const applicantsList = document.getElementById('applicants-list');
+            applicantsList.innerHTML = '';
+            
+            sampleApplicants.forEach(applicant => {
+                const applicantCard = document.createElement('div');
+                applicantCard.className = 'applicant-card';
+                applicantCard.innerHTML = `
+                    <div class="applicant-header">
+                        <div class="applicant-info">
+                            <img src="${applicant.avatar}" alt="${applicant.name}" class="applicant-avatar">
+                            <div class="applicant-details">
+                                <h3 class="applicant-name">${applicant.name}</h3>
+                                <p class="applicant-title">${applicant.title}</p>
+                                <div class="applicant-meta">
+                                    <span class="location"><i data-lucide="map-pin"></i> ${applicant.location}</span>
+                                    <span class="experience"><i data-lucide="briefcase"></i> ${applicant.experience}</span>
+                                    <span class="applied-date"><i data-lucide="calendar"></i> Applied ${formatDate(applicant.appliedDate)}</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="applicant-status">
+                            <div class="match-score">
+                                <span class="score">${applicant.matchScore}%</span>
+                                <span class="label">Match</span>
+                            </div>
+                            <div class="status-badge" style="background-color: ${statusColors[applicant.status]}20; color: ${statusColors[applicant.status]}">
+                                ${applicant.statusText}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="applicant-body">
+                        <div class="applicant-skills">
+                            ${applicant.skills.slice(0, 5).map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+                        </div>
+                        
+                        <div class="applicant-actions">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" class="applicant-checkbox" onchange="updateBulkActions()">
+                                <span class="checkmark"></span>
+                            </label>
+                            <button class="btn btn-outline btn-sm" onclick="viewApplicantDetails(${applicant.id})">
+                                <i data-lucide="eye"></i>
+                                View Profile
+                            </button>
+                            <button class="btn btn-outline btn-sm">
+                                <i data-lucide="star"></i>
+                                Shortlist
+                            </button>
+                            <button class="btn btn-outline btn-sm">
+                                <i data-lucide="calendar"></i>
+                                Schedule
+                            </button>
+                            <button class="btn btn-outline btn-sm">
+                                <i data-lucide="mail"></i>
+                                Message
+                            </button>
+                        </div>
+                    </div>
+                `;
+                applicantsList.appendChild(applicantCard);
+            });
+        }
+        
+        // Format date
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', { 
+                month: 'short', 
+                day: 'numeric', 
+                year: 'numeric' 
+            });
+        }
+        
+        // View applicant details
+        function viewApplicantDetails(applicantId) {
+            const applicant = sampleApplicants.find(a => a.id === applicantId);
+            if (!applicant) return;
+            
+            document.getElementById('modal-applicant-name').textContent = applicant.name;
+            document.getElementById('modal-name').textContent = applicant.name;
+            document.getElementById('modal-title').textContent = applicant.title;
+            document.getElementById('modal-location').textContent = applicant.location;
+            document.getElementById('modal-match-score').textContent = `${applicant.matchScore}%`;
+            document.getElementById('modal-experience').textContent = applicant.experience;
+            document.getElementById('modal-applied-date').textContent = formatDate(applicant.appliedDate);
+            document.getElementById('modal-cover-letter').textContent = applicant.coverLetter;
+            
+            // Populate skills
+            const skillsGrid = document.getElementById('modal-skills');
+            skillsGrid.innerHTML = applicant.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('');
+            
+            // Populate experience
+            const experienceList = document.getElementById('modal-experience');
+            experienceList.innerHTML = applicant.experience.map(exp => `
+                <div class="experience-item">
+                    <h5>${exp.role}</h5>
+                    <p class="company">${exp.company}</p>
+                    <p class="duration">${exp.duration}</p>
+                </div>
+            `).join('');
+            
+            // Populate education
+            document.getElementById('modal-education').textContent = applicant.education;
+            
+            document.getElementById('applicant-modal').style.display = 'flex';
+        }
+        
+        // Update bulk actions
+        function updateBulkActions() {
+            const checkboxes = document.querySelectorAll('.applicant-checkbox:checked');
+            const bulkActions = document.getElementById('bulk-actions');
+            const selectedCount = document.getElementById('selected-count');
+            
+            if (checkboxes.length > 0) {
+                bulkActions.style.display = 'flex';
+                selectedCount.textContent = checkboxes.length;
+            } else {
+                bulkActions.style.display = 'none';
+            }
+        }
+        
+        // Close modal
+        document.getElementById('modal-close').addEventListener('click', () => {
+            document.getElementById('applicant-modal').style.display = 'none';
+        });
+        
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            populateApplicants();
+        });
+    </script>
+</body>
+</html>

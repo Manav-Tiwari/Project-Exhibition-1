@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter Dashboard - ResumeBERT</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/recruiter-dashboard.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    <div id="sidebar-container"></div>
+    
+    <main class="main-content">
+        <div class="dashboard-header">
+            <div class="welcome-section">
+                <h1>Welcome back, Jane!</h1>
+                <p>Here's your recruitment overview for today</p>
+            </div>
+            <div class="quick-actions">
+                <button class="btn btn-primary">
+                    <i data-lucide="plus"></i>
+                    Post New Job
+                </button>
+                <button class="btn btn-outline">
+                    <i data-lucide="users"></i>
+                    View Candidates
+                </button>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <!-- Recruiter Stats Overview -->
+            <div class="stats-overview">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="total-candidates">12,450</h3>
+                        <p>Total Candidates</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i data-lucide="briefcase"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="active-jobs">892</h3>
+                        <p>Active Jobs</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i data-lucide="calendar"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="interviews-scheduled">156</h3>
+                        <p>Interviews Scheduled</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i data-lucide="target"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="hires">67</h3>
+                        <p>Successful Hires</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Candidate Funnel Chart -->
+            <div class="funnel-section">
+                <div class="section-header">
+                    <h2>Candidate Funnel</h2>
+                    <p>Track your recruitment pipeline</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="funnel-chart"></canvas>
+                </div>
+            </div>
+
+            <!-- Active Job Postings -->
+            <div class="active-jobs-section">
+                <div class="section-header">
+                    <h2>Active Job Postings</h2>
+                    <a href="jobs.html" class="view-all-link">Manage All Jobs</a>
+                </div>
+                <div class="jobs-grid" id="active-jobs-list">
+                    <!-- Active jobs will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Recent Applications -->
+            <div class="recent-applications-section">
+                <div class="section-header">
+                    <h2>Recent Applications</h2>
+                    <a href="applications.html" class="view-all-link">View All</a>
+                </div>
+                <div class="applications-list" id="recent-applications-list">
+                    <!-- Recent applications will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Performance Metrics -->
+            <div class="performance-metrics-section">
+                <div class="section-header">
+                    <h2>Performance Metrics</h2>
+                    <p>Key recruitment KPIs</p>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <h4>Time to Hire</h4>
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <div class="metric-value">18 days</div>
+                        <div class="metric-trend positive">↓ 12% from last month</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <h4>Cost per Hire</h4>
+                            <i data-lucide="dollar-sign"></i>
+                        </div>
+                        <div class="metric-value">$4,500</div>
+                        <div class="metric-trend positive">↓ 23% from last month</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <h4>Candidate Quality</h4>
+                            <i data-lucide="star"></i>
+                        </div>
+                        <div class="metric-value">8.7/10</div>
+                        <div class="metric-trend positive">↑ 5% from last month</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <h4>AI Match Accuracy</h4>
+                            <i data-lucide="brain"></i>
+                        </div>
+                        <div class="metric-value">87%</div>
+                        <div class="metric-trend positive">↑ 8% from last month</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Demand Analysis -->
+            <div class="skills-demand-section">
+                <div class="section-header">
+                    <h2>Skills Demand Analysis</h2>
+                    <p>Market trends and skill requirements</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="skills-demand-chart"></canvas>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions-section">
+                <div class="section-header">
+                    <h2>Quick Actions</h2>
+                </div>
+                <div class="actions-grid">
+                    <a href="post-job.html" class="action-card">
+                        <div class="action-icon">
+                            <i data-lucide="plus-circle"></i>
+                        </div>
+                        <h4>Post New Job</h4>
+                        <p>Create and publish a new job posting</p>
+                    </a>
+                    <a href="candidates.html" class="action-card">
+                        <div class="action-icon">
+                            <i data-lucide="search"></i>
+                        </div>
+                        <h4>Search Candidates</h4>
+                        <p>Find candidates by skills and experience</p>
+                    </a>
+                    <a href="analytics.html" class="action-card">
+                        <div class="action-icon">
+                            <i data-lucide="bar-chart-3"></i>
+                        </div>
+                        <h4>View Analytics</h4>
+                        <p>Detailed recruitment performance data</p>
+                    </a>
+                    <a href="settings.html" class="action-card">
+                        <div class="action-icon">
+                            <i data-lucide="settings"></i>
+                        </div>
+                        <h4>Recruitment Settings</h4>
+                        <p>Configure your recruitment preferences</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/recruiter-dashboard.js"></script>
+</body>
+</html>

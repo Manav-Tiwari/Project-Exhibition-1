@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - ResumeBERT</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    <div id="sidebar-container"></div>
+    
+    <main class="main-content">
+        <div class="page-header">
+            <h1>My Profile</h1>
+            <p>Manage your professional information and preferences</p>
+        </div>
+
+        <div class="profile-container">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="profile-avatar-section">
+                    <div class="profile-avatar">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" 
+                             alt="Profile Avatar" class="avatar-image">
+                        <button class="avatar-edit-btn" type="button">
+                            <i data-lucide="camera"></i>
+                        </button>
+                    </div>
+                    <div class="profile-info">
+                        <h2>Manav Tiwari</h2>
+                        <p class="profile-title">Frontend Developer</p>
+                        <p class="profile-location">
+                            <i data-lucide="map-pin"></i>
+                            San Francisco, CA
+                        </p>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <span class="stat-value">87%</span>
+                                <span class="stat-label">Match Score</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">12</span>
+                                <span class="stat-label">Applications</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">3</span>
+                                <span class="stat-label">Interviews</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <button class="btn btn-outline">
+                        <i data-lucide="download"></i>
+                        Download Resume
+                    </button>
+                    <button class="btn btn-primary">
+                        <i data-lucide="edit"></i>
+                        Edit Profile
+                    </button>
+                </div>
+            </div>
+
+            <!-- Profile Content -->
+            <div class="profile-content">
+                <!-- Personal Information -->
+                <div class="profile-section">
+                    <div class="section-header">
+                        <h3>Personal Information</h3>
+                        <button class="edit-section-btn" type="button">
+                            <i data-lucide="edit-3"></i>
+                        </button>
+                    </div>
+                    <div class="section-content">
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <label>Full Name</label>
+                                <p>Manav Tiwari</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Email</label>
+                                <p>manav.tiwari@email.com</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Phone</label>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Location</label>
+                                <p>San Francisco, CA</p>
+                            </div>
+                            <div class="info-item">
+                                <label>LinkedIn</label>
+                                <p>linkedin.com/in/manavtiwari</p>
+                            </div>
+                            <div class="info-item">
+                                <label>GitHub</label>
+                                <p>github.com/manavtiwari</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="profile-section">
+                    <div class="section-header">
+                        <h3>Skills</h3>
+                        <button class="edit-section-btn" type="button">
+                            <i data-lucide="edit-3"></i>
+                        </button>
+                    </div>
+                    <div class="section-content">
+                        <div class="skills-container">
+                            <div class="skill-category">
+                                <h4>Frontend Development</h4>
+                                <div class="skills-list">
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">Vue.js</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">TypeScript</span>
+                                    <span class="skill-tag">HTML5</span>
+                                    <span class="skill-tag">CSS3</span>
+                                    <span class="skill-tag">Sass</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Backend Development</h4>
+                                <div class="skills-list">
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">Express</span>
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Django</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Tools & Technologies</h4>
+                                <div class="skills-list">
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">Docker</span>
+                                    <span class="skill-tag">AWS</span>
+                                    <span class="skill-tag">Figma</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="profile-section">
+                    <div class="section-header">
+                        <h3>Work Experience</h3>
+                        <button class="edit-section-btn" type="button">
+                            <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                    <div class="section-content">
+                        <div class="experience-list">
+                            <div class="experience-item">
+                                <div class="experience-header">
+                                    <h4>Senior Frontend Developer</h4>
+                                    <span class="experience-date">2022 - Present</span>
+                                </div>
+                                <p class="company-name">TechCorp Inc.</p>
+                                <p class="experience-description">
+                                    Led frontend development for multiple web applications, mentored junior developers, 
+                                    and implemented best practices for code quality and performance.
+                                </p>
+                                <div class="experience-skills">
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">TypeScript</span>
+                                    <span class="skill-tag">Redux</span>
+                                </div>
+                            </div>
+                            <div class="experience-item">
+                                <div class="experience-header">
+                                    <h4>Frontend Developer</h4>
+                                    <span class="experience-date">2020 - 2022</span>
+                                </div>
+                                <p class="company-name">StartupXYZ</p>
+                                <p class="experience-description">
+                                    Developed responsive web applications using modern JavaScript frameworks and 
+                                    collaborated with design and backend teams.
+                                </p>
+                                <div class="experience-skills">
+                                    <span class="skill-tag">Vue.js</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">CSS3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="profile-section">
+                    <div class="section-header">
+                        <h3>Education</h3>
+                        <button class="edit-section-btn" type="button">
+                            <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                    <div class="section-content">
+                        <div class="education-list">
+                            <div class="education-item">
+                                <div class="education-header">
+                                    <h4>Bachelor of Science in Computer Science</h4>
+                                    <span class="education-date">2016 - 2020</span>
+                                </div>
+                                <p class="institution-name">University of California, Berkeley</p>
+                                <p class="education-description">
+                                    Graduated with honors. Focused on software engineering and web development.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="profile-section">
+                    <div class="section-header">
+                        <h3>Certifications</h3>
+                        <button class="edit-section-btn" type="button">
+                            <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                    <div class="section-content">
+                        <div class="certifications-list">
+                            <div class="certification-item">
+                                <div class="certification-header">
+                                    <h4>AWS Certified Developer</h4>
+                                    <span class="certification-date">2023</span>
+                                </div>
+                                <p class="certification-issuer">Amazon Web Services</p>
+                            </div>
+                            <div class="certification-item">
+                                <div class="certification-header">
+                                    <h4>React Developer Certification</h4>
+                                    <span class="certification-date">2022</span>
+                                </div>
+                                <p class="certification-issuer">Meta</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="../js/main.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

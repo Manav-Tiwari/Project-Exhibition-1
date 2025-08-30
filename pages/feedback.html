@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - CareerConnect</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/landing.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    
+    <div class="dashboard-container">
+        <div id="sidebar-container"></div>
+        
+        <main class="main-content">
+            <div class="page-header">
+                <h1>Feedback & Suggestions</h1>
+                <p>Help us improve CareerConnect by sharing your thoughts</p>
+            </div>
+
+            <!-- Feedback Overview -->
+            <section class="feedback-overview">
+                <div class="overview-cards">
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i data-lucide="message-square"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Total Feedback</h3>
+                            <span class="overview-number">1,247</span>
+                            <span class="overview-text">Submissions</span>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i data-lucide="check-circle"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Implemented</h3>
+                            <span class="overview-number">89</span>
+                            <span class="overview-text">Features</span>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Response Time</h3>
+                            <span class="overview-number">48h</span>
+                            <span class="overview-text">Average</span>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i data-lucide="star"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>User Rating</h3>
+                            <span class="overview-number">4.6/5</span>
+                            <span class="overview-text">Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Feedback Form -->
+            <section class="feedback-form-section">
+                <div class="section-header">
+                    <h2>Share Your Feedback</h2>
+                    <p>Tell us what you think about CareerConnect</p>
+                </div>
+                
+                <form class="feedback-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="feedbackType">Feedback Type *</label>
+                            <select id="feedbackType" name="feedbackType" required>
+                                <option value="">Select feedback type</option>
+                                <option value="feature">Feature Request</option>
+                                <option value="improvement">Improvement Suggestion</option>
+                                <option value="bug">Bug Report</option>
+                                <option value="praise">Praise/Compliment</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="category">Category *</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select category</option>
+                                <option value="user-interface">User Interface</option>
+                                <option value="functionality">Functionality</option>
+                                <option value="performance">Performance</option>
+                                <option value="mobile">Mobile Experience</option>
+                                <option value="job-search">Job Search</option>
+                                <option value="profile">Profile Management</option>
+                                <option value="notifications">Notifications</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="feedbackTitle">Title *</label>
+                        <input type="text" id="feedbackTitle" name="feedbackTitle" placeholder="Brief description of your feedback" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="feedbackDescription">Detailed Description *</label>
+                        <textarea id="feedbackDescription" name="feedbackDescription" rows="6" placeholder="Please provide detailed information about your feedback, including any specific examples or steps to reproduce issues..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="impact">Impact Level</label>
+                        <select id="impact" name="impact">
+                            <option value="low">Low - Nice to have</option>
+                            <option value="medium" selected>Medium - Would improve experience</option>
+                            <option value="high">High - Significantly improves experience</option>
+                            <option value="critical">Critical - Blocks important functionality</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="priority">Priority</label>
+                        <select id="priority" name="priority">
+                            <option value="low">Low - Can wait</option>
+                            <option value="medium" selected>Medium - Sooner the better</option>
+                            <option value="high">High - Important to address</option>
+                            <option value="urgent">Urgent - Needs immediate attention</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="attachments">Attachments</label>
+                        <input type="file" id="attachments" name="attachments" multiple>
+                        <small>You can attach screenshots, videos, or documents to help explain your feedback (max 25MB total)</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactInfo">Contact Information (Optional)</label>
+                        <input type="email" id="contactInfo" name="contactInfo" placeholder="Email if you'd like us to follow up">
+                        <small>We'll only use this to follow up on your feedback if needed</small>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i data-lucide="send"></i>
+                            Submit Feedback
+                        </button>
+                        <button type="reset" class="btn btn-secondary">Clear Form</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Recent Feedback -->
+            <section class="recent-feedback">
+                <div class="section-header">
+                    <h2>Recent Community Feedback</h2>
+                    <p>See what other users are saying</p>
+                </div>
+                
+                <div class="feedback-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="feature">Feature Requests</button>
+                    <button class="filter-btn" data-filter="improvement">Improvements</button>
+                    <button class="filter-btn" data-filter="bug">Bug Reports</button>
+                    <button class="filter-btn" data-filter="praise">Praise</button>
+                </div>
+                
+                <div class="feedback-items">
+                    <div class="feedback-item" data-type="feature">
+                        <div class="feedback-header">
+                            <h3>Dark Mode Theme</h3>
+                            <span class="feedback-type feature">Feature Request</span>
+                        </div>
+                        <p>Would love to see a dark mode option for the dashboard. It would be great for users who prefer dark themes and for use in low-light environments.</p>
+                        <div class="feedback-meta">
+                            <span class="votes">👍 127 votes</span>
+                            <span class="status in-progress">🔄 In Progress</span>
+                            <span class="date">2 days ago</span>
+                        </div>
+                        <div class="feedback-actions">
+                            <button class="btn btn-outline">Vote</button>
+                            <button class="btn btn-outline">Comment</button>
+                        </div>
+                    </div>
+
+                    <div class="feedback-item" data-type="improvement">
+                        <div class="feedback-header">
+                            <h3>Job Search Filters</h3>
+                            <span class="feedback-type improvement">Improvement</span>
+                        </div>
+                        <p>The job search filters could be more intuitive. Adding saved searches and better location-based filtering would make job hunting much easier.</p>
+                        <div class="feedback-meta">
+                            <span class="votes">👍 89 votes</span>
+                            <span class="status planned">📅 Planned</span>
+                            <span class="date">1 week ago</span>
+                        </div>
+                        <div class="feedback-actions">
+                            <button class="btn btn-outline">Vote</button>
+                            <button class="btn btn-outline">Comment</button>
+                        </div>
+                    </div>
+
+                    <div class="feedback-item" data-type="bug">
+                        <div class="feedback-header">
+                            <h3>Profile Picture Upload Issue</h3>
+                            <span class="feedback-type bug">Bug Report</span>
+                        </div>
+                        <p>When trying to upload a profile picture, the image gets cropped incorrectly and the save button doesn't work properly on mobile devices.</p>
+                        <div class="feedback-meta">
+                            <span class="votes">👍 45 votes</span>
+                            <span class="status fixed">✅ Fixed</span>
+                            <span class="date">2 weeks ago</span>
+                        </div>
+                        <div class="feedback-actions">
+                            <button class="btn btn-outline">Vote</button>
+                            <button class="btn btn-outline">Comment</button>
+                        </div>
+                    </div>
+
+                    <div class="feedback-item" data-type="praise">
+                        <div class="feedback-header">
+                            <h3>Excellent Resume Builder</h3>
+                            <span class="feedback-type praise">Praise</span>
+                        </div>
+                        <p>The resume builder is fantastic! The templates are professional and the editing interface is very intuitive. Helped me land my dream job!</p>
+                        <div class="feedback-meta">
+                            <span class="votes">👍 203 votes</span>
+                            <span class="status acknowledged">💬 Acknowledged</span>
+                            <span class="date">3 weeks ago</span>
+                        </div>
+                        <div class="feedback-actions">
+                            <button class="btn btn-outline">Vote</button>
+                            <button class="btn btn-outline">Comment</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Feedback Status -->
+            <section class="feedback-status">
+                <div class="section-header">
+                    <h2>Feedback Status</h2>
+                    <p>Track the status of your submitted feedback</p>
+                </div>
+                
+                <div class="status-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker completed">
+                            <i data-lucide="check"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Feedback Submitted</h3>
+                            <p>Your feedback has been received and is under review</p>
+                            <span class="timeline-date">Submitted on March 15, 2024</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker completed">
+                            <i data-lucide="eye"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Under Review</h3>
+                            <p>Our team is analyzing your feedback and determining the best approach</p>
+                            <span class="timeline-date">Reviewed on March 17, 2024</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker active">
+                            <i data-lucide="settings"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>In Development</h3>
+                            <p>Your feature request is being developed and will be available soon</p>
+                            <span class="timeline-date">Started on March 20, 2024</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i data-lucide="rocket"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Released</h3>
+                            <p>Your requested feature will be available in the next update</p>
+                            <span class="timeline-date">Estimated: April 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Feedback Guidelines -->
+            <section class="feedback-guidelines">
+                <div class="section-header">
+                    <h2>Feedback Guidelines</h2>
+                    <p>Help us provide the best feedback experience</p>
+                </div>
+                
+                <div class="guidelines-grid">
+                    <div class="guideline-card">
+                        <div class="guideline-icon">
+                            <i data-lucide="lightbulb"></i>
+                        </div>
+                        <h3>Be Specific</h3>
+                        <p>Provide detailed descriptions and specific examples to help us understand your feedback better.</p>
+                    </div>
+
+                    <div class="guideline-card">
+                        <div class="guideline-icon">
+                            <i data-lucide="heart"></i>
+                        </div>
+                        <h3>Be Constructive</h3>
+                        <p>Focus on how we can improve rather than just pointing out problems. Suggest solutions when possible.</p>
+                    </div>
+
+                    <div class="guideline-card">
+                        <div class="guideline-icon">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <h3>Consider Others</h3>
+                        <p>Think about how your feedback might affect other users and the overall platform experience.</p>
+                    </div>
+
+                    <div class="guideline-card">
+                        <div class="guideline-icon">
+                            <i data-lucide="check-circle"></i>
+                        </div>
+                        <h3>Check Existing</h3>
+                        <p>Search for similar feedback before submitting to avoid duplicates and add your vote to existing requests.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Feedback Impact -->
+            <section class="feedback-impact">
+                <div class="section-header">
+                    <h2>Your Feedback Makes a Difference</h2>
+                    <p>See how user feedback has shaped CareerConnect</p>
+                </div>
+                
+                <div class="impact-stats">
+                    <div class="impact-card">
+                        <div class="impact-number">89</div>
+                        <h3>Features Implemented</h3>
+                        <p>Based on user feedback and suggestions</p>
+                    </div>
+
+                    <div class="impact-card">
+                        <div class="impact-number">156</div>
+                        <h3>Bugs Fixed</h3>
+                        <p>Issues reported and resolved by users</p>
+                    </div>
+
+                    <div class="impact-card">
+                        <div class="impact-number">2.3M</div>
+                        <h3>Users Impacted</h3>
+                        <p>People benefiting from feedback-driven improvements</p>
+                    </div>
+
+                    <div class="impact-card">
+                        <div class="impact-number">48h</div>
+                        <h3>Average Response</h3>
+                        <p>Time to acknowledge and review feedback</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Feedback form submission
+        document.querySelector('.feedback-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const feedbackType = formData.get('feedbackType');
+            const feedbackTitle = formData.get('feedbackTitle');
+            
+            alert(`Thank you for your feedback!\n\nType: ${feedbackType}\nTitle: ${feedbackTitle}\n\nWe've received your submission and will review it within 48 hours. You'll receive an email confirmation shortly.`);
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Feedback filters
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const filter = this.dataset.filter;
+                const feedbackItems = document.querySelectorAll('.feedback-item');
+                
+                feedbackItems.forEach(item => {
+                    if (filter === 'all' || item.dataset.type === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Feedback item actions
+        document.querySelectorAll('.feedback-actions .btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const action = this.textContent;
+                const feedbackTitle = this.closest('.feedback-item').querySelector('h3').textContent;
+                
+                if (action === 'Vote') {
+                    const votesElement = this.closest('.feedback-item').querySelector('.votes');
+                    const currentVotes = parseInt(votesElement.textContent.match(/\d+/)[0]);
+                    votesElement.textContent = `👍 ${currentVotes + 1} votes`;
+                    this.textContent = 'Voted';
+                    this.disabled = true;
+                    alert(`Vote added for: ${feedbackTitle}`);
+                } else if (action === 'Comment') {
+                    alert(`Comment feature for: ${feedbackTitle}\n\nThis would open a comment form to add your thoughts and suggestions.`);
+                }
+            });
+        });
+
+        // Form field validation
+        document.querySelectorAll('.feedback-form input, .feedback-form select, .feedback-form textarea').forEach(field => {
+            field.addEventListener('blur', function() {
+                if (this.hasAttribute('required') && !this.value.trim()) {
+                    this.classList.add('error');
+                } else {
+                    this.classList.remove('error');
+                }
+            });
+            
+            field.addEventListener('input', function() {
+                if (this.classList.contains('error') && this.value.trim()) {
+                    this.classList.remove('error');
+                }
+            });
+        });
+
+        // Dynamic category update based on feedback type
+        document.getElementById('feedbackType').addEventListener('change', function() {
+            const categorySelect = document.getElementById('category');
+            const selectedType = this.value;
+            
+            // Reset category
+            categorySelect.innerHTML = '<option value="">Select category</option>';
+            
+            // Add relevant categories based on feedback type
+            if (selectedType === 'bug') {
+                categorySelect.innerHTML += `
+                    <option value="user-interface">User Interface</option>
+                    <option value="functionality">Functionality</option>
+                    <option value="performance">Performance</option>
+                    <option value="mobile">Mobile Experience</option>
+                    <option value="other">Other</option>
+                `;
+            } else if (selectedType === 'feature') {
+                categorySelect.innerHTML += `
+                    <option value="user-interface">User Interface</option>
+                    <option value="functionality">Functionality</option>
+                    <option value="job-search">Job Search</option>
+                    <option value="profile">Profile Management</option>
+                    <option value="notifications">Notifications</option>
+                    <option value="other">Other</option>
+                `;
+            } else {
+                // Default categories for other types
+                categorySelect.innerHTML += `
+                    <option value="user-interface">User Interface</option>
+                    <option value="functionality">Functionality</option>
+                    <option value="performance">Performance</option>
+                    <option value="mobile">Mobile Experience</option>
+                    <option value="job-search">Job Search</option>
+                    <option value="profile">Profile Management</option>
+                    <option value="notifications">Notifications</option>
+                    <option value="other">Other</option>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

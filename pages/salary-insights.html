@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Insights - CareerConnect</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/landing.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    
+    <div class="dashboard-container">
+        <div id="sidebar-container"></div>
+        
+        <main class="main-content">
+            <div class="page-header">
+                <h1>Salary Insights</h1>
+                <p>Explore salary data and market trends for your career</p>
+            </div>
+
+            <!-- Salary Overview -->
+            <section class="salary-overview">
+                <div class="overview-cards">
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i data-lucide="dollar-sign"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Average Salary</h3>
+                            <span class="overview-number">$95,000</span>
+                            <span class="trend up">+5.2% from last year</span>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i data-lucide="trending-up"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Market Trend</h3>
+                            <span class="overview-number">Growing</span>
+                            <span class="trend up">High demand for skills</span>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Top Paying City</h3>
+                            <span class="overview-number">San Francisco</span>
+                            <span class="trend up">$125,000 avg</span>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i data-lucide="briefcase"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Experience Premium</h3>
+                            <span class="overview-number">+15%</span>
+                            <span class="trend up">Per year of experience</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Salary Search -->
+            <section class="salary-search">
+                <div class="section-header">
+                    <h2>Salary Research</h2>
+                    <p>Search for salary information by job title, location, and experience</p>
+                </div>
+                
+                <form class="salary-search-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="jobTitle">Job Title</label>
+                            <input type="text" id="jobTitle" name="jobTitle" placeholder="e.g., Frontend Developer, Software Engineer">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" name="location" placeholder="e.g., San Francisco, Remote, New York">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="experience">Experience Level</label>
+                            <select id="experience" name="experience">
+                                <option value="">All Levels</option>
+                                <option value="entry">Entry Level (0-2 years)</option>
+                                <option value="mid">Mid Level (3-5 years)</option>
+                                <option value="senior">Senior Level (6-10 years)</option>
+                                <option value="lead">Lead/Manager (10+ years)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i data-lucide="search"></i>
+                        Search Salaries
+                    </button>
+                </form>
+            </section>
+
+            <!-- Popular Job Salaries -->
+            <section class="salary-section">
+                <div class="section-header">
+                    <h2>Popular Job Salaries</h2>
+                    <p>Salary ranges for in-demand positions</p>
+                </div>
+                
+                <div class="salary-cards">
+                    <div class="salary-card">
+                        <div class="salary-header">
+                            <h3>Frontend Developer</h3>
+                            <span class="demand high">High Demand</span>
+                        </div>
+                        <div class="salary-range">
+                            <span class="min">$65,000</span>
+                            <span class="separator">-</span>
+                            <span class="max">$130,000</span>
+                        </div>
+                        <div class="salary-details">
+                            <div class="detail-item">
+                                <span class="label">Median:</span>
+                                <span class="value">$95,000</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Entry Level:</span>
+                                <span class="value">$65,000</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Senior Level:</span>
+                                <span class="value">$130,000</span>
+                            </div>
+                        </div>
+                        <div class="location-comparison">
+                            <h4>Top Paying Cities:</h4>
+                            <div class="city-salaries">
+                                <span class="city">San Francisco: $125,000</span>
+                                <span class="city">New York: $115,000</span>
+                                <span class="city">Seattle: $110,000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="salary-card">
+                        <div class="salary-header">
+                            <h3>Full Stack Developer</h3>
+                            <span class="demand high">High Demand</span>
+                        </div>
+                        <div class="salary-range">
+                            <span class="min">$75,000</span>
+                            <span class="separator">-</span>
+                            <span class="max">$150,000</span>
+                        </div>
+                        <div class="salary-details">
+                            <div class="detail-item">
+                                <span class="label">Median:</span>
+                                <span class="value">$110,000</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Entry Level:</span>
+                                <span class="value">$75,000</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Senior Level:</span>
+                                <span class="value">$150,000</span>
+                            </div>
+                        </div>
+                        <div class="location-comparison">
+                            <h4>Top Paying Cities:</h4>
+                            <div class="city-salaries">
+                                <span class="city">San Francisco: $140,000</span>
+                                <span class="city">New York: $135,000</span>
+                                <span class="city">Seattle: $130,000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="salary-card">
+                        <div class="salary-header">
+                            <h3>Data Scientist</h3>
+                            <span class="demand very-high">Very High Demand</span>
+                        </div>
+                        <div class="salary-range">
+                            <span class="min">$80,000</span>
+                            <span class="separator">-</span>
+                            <span class="max">$160,000</span>
+                        </div>
+                        <div class="salary-details">
+                            <div class="detail-item">
+                                <span class="label">Median:</span>
+                                <span class="value">$120,000</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Entry Level:</span>
+                                <span class="value">$80,000</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Senior Level:</span>
+                                <span class="value">$160,000</span>
+                            </div>
+                        </div>
+                        <div class="location-comparison">
+                            <h4>Top Paying Cities:</h4>
+                            <div class="city-salaries">
+                                <span class="city">San Francisco: $150,000</span>
+                                <span class="city">New York: $145,000</span>
+                                <span class="city">Seattle: $140,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Market Trends -->
+            <section class="salary-section">
+                <div class="section-header">
+                    <h2>Market Trends</h2>
+                    <p>Salary trends and market insights</p>
+                </div>
+                
+                <div class="trends-grid">
+                    <div class="trend-card">
+                        <div class="trend-header">
+                            <h3>Salary Growth by Experience</h3>
+                            <span class="trend-period">Last 5 Years</span>
+                        </div>
+                        <div class="trend-data">
+                            <div class="trend-item">
+                                <span class="level">Entry Level</span>
+                                <span class="growth up">+12%</span>
+                            </div>
+                            <div class="trend-item">
+                                <span class="level">Mid Level</span>
+                                <span class="growth up">+18%</span>
+                            </div>
+                            <div class="trend-item">
+                                <span class="level">Senior Level</span>
+                                <span class="growth up">+25%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trend-card">
+                        <div class="trend-header">
+                            <h3>Top Growing Skills</h3>
+                            <span class="trend-period">Salary Premium</span>
+                        </div>
+                        <div class="trend-data">
+                            <div class="trend-item">
+                                <span class="skill">Machine Learning</span>
+                                <span class="premium up">+35%</span>
+                            </div>
+                            <div class="trend-item">
+                                <span class="skill">Cloud Computing</span>
+                                <span class="premium up">+28%</span>
+                            </div>
+                            <div class="trend-item">
+                                <span class="skill">DevOps</span>
+                                <span class="premium up">+22%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trend-card">
+                        <div class="trend-header">
+                            <h3>Remote Work Impact</h3>
+                            <span class="trend-period">Salary Comparison</span>
+                        </div>
+                        <div class="trend-data">
+                            <div class="trend-item">
+                                <span class="type">Remote</span>
+                                <span class="comparison">+8% vs Local</span>
+                            </div>
+                            <div class="trend-item">
+                                <span class="type">Hybrid</span>
+                                <span class="comparison">+5% vs Local</span>
+                            </div>
+                            <div class="trend-item">
+                                <span class="type">On-site</span>
+                                <span class="comparison">Base Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Salary Negotiation Tips -->
+            <section class="salary-section">
+                <div class="section-header">
+                    <h2>Salary Negotiation Tips</h2>
+                    <p>Strategies to maximize your compensation</p>
+                </div>
+                
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i data-lucide="research"></i>
+                        </div>
+                        <h3>Research Market Rates</h3>
+                        <p>Use salary data to understand your worth in the market and set realistic expectations.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i data-lucide="target"></i>
+                        </div>
+                        <h3>Set Your Target Range</h3>
+                        <p>Determine your ideal salary range and be prepared to negotiate within those boundaries.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <h3>Timing is Key</h3>
+                        <p>Wait for the right moment to discuss salary, usually after demonstrating your value.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i data-lucide="package"></i>
+                        </div>
+                        <h3>Consider Total Package</h3>
+                        <p>Look beyond base salary to benefits, bonuses, equity, and other compensation elements.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i data-lucide="message-circle"></i>
+                        </div>
+                        <h3>Practice Your Pitch</h3>
+                        <p>Rehearse your negotiation points and be confident in articulating your value.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i data-lucide="handshake"></i>
+                        </div>
+                        <h3>Be Willing to Walk Away</h3>
+                        <p>Know your bottom line and be prepared to decline if the offer doesn't meet your requirements.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Industry Comparison -->
+            <section class="salary-section">
+                <div class="section-header">
+                    <h2>Industry Comparison</h2>
+                    <p>Salary differences across various industries</p>
+                </div>
+                
+                <div class="industry-comparison">
+                    <div class="industry-card">
+                        <h3>Technology</h3>
+                        <div class="industry-stats">
+                            <div class="stat">
+                                <span class="label">Average Salary:</span>
+                                <span class="value">$110,000</span>
+                            </div>
+                            <div class="stat">
+                                <span class="label">Growth Rate:</span>
+                                <span class="value up">+8.5%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="label">Top Roles:</span>
+                                <span class="value">Software Engineer, Data Scientist</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="industry-card">
+                        <h3>Finance</h3>
+                        <div class="industry-stats">
+                            <div class="stat">
+                                <span class="label">Average Salary:</span>
+                                <span class="value">$95,000</span>
+                            </div>
+                            <div class="stat">
+                                <span class="label">Growth Rate:</span>
+                                <span class="value up">+6.2%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="label">Top Roles:</span>
+                                <span class="value">Financial Analyst, Risk Manager</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="industry-card">
+                        <h3>Healthcare</h3>
+                        <div class="industry-stats">
+                            <div class="stat">
+                                <span class="label">Average Salary:</span>
+                                <span class="value">$85,000</span>
+                            </div>
+                            <div class="stat">
+                                <span class="label">Growth Rate:</span>
+                                <span class="value up">+7.1%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="label">Top Roles:</span>
+                                <span class="value">Healthcare Administrator, Nurse Practitioner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Salary search form
+        document.querySelector('.salary-search-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const jobTitle = document.getElementById('jobTitle').value;
+            const location = document.getElementById('location').value;
+            const experience = document.getElementById('experience').value;
+            
+            if (jobTitle) {
+                alert(`Searching for salary data: ${jobTitle}${location ? ` in ${location}` : ''}${experience ? ` (${experience})` : ''}`);
+            } else {
+                alert('Please enter a job title to search for salary information.');
+            }
+        });
+
+        // Interactive salary cards
+        document.querySelectorAll('.salary-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const jobTitle = this.querySelector('h3').textContent;
+                const medianSalary = this.querySelector('.salary-details .detail-item:first-child .value').textContent;
+                alert(`Detailed salary information for ${jobTitle}\nMedian Salary: ${medianSalary}`);
+            });
+        });
+
+        // Trend cards interaction
+        document.querySelectorAll('.trend-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const trendTitle = this.querySelector('h3').textContent;
+                alert(`Detailed trend analysis for: ${trendTitle}`);
+            });
+        });
+
+        // Tip cards interaction
+        document.querySelectorAll('.tip-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const tipTitle = this.querySelector('h3').textContent;
+                const tipDescription = this.querySelector('p').textContent;
+                alert(`${tipTitle}\n\n${tipDescription}`);
+            });
+        });
+
+        // Industry comparison interaction
+        document.querySelectorAll('.industry-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const industryName = this.querySelector('h3').textContent;
+                const avgSalary = this.querySelector('.stat:first-child .value').textContent;
+                alert(`Industry: ${industryName}\nAverage Salary: ${avgSalary}`);
+            });
+        });
+    </script>
+</body>
+</html>

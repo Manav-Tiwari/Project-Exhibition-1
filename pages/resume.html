@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder - ResumeBERT</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    <div id="sidebar-container"></div>
+    
+    <main class="main-content">
+        <div class="page-header">
+            <h1>Resume Builder</h1>
+            <p>Create a professional resume that stands out to recruiters</p>
+        </div>
+
+        <div class="resume-builder-container">
+            <!-- Resume Builder Tools -->
+            <div class="resume-tools">
+                <div class="tool-section">
+                    <h3>Resume Templates</h3>
+                    <div class="template-grid">
+                        <div class="template-item active">
+                            <div class="template-preview">
+                                <div class="template-header"></div>
+                                <div class="template-body"></div>
+                            </div>
+                            <span>Professional</span>
+                        </div>
+                        <div class="template-item">
+                            <div class="template-preview creative">
+                                <div class="template-header"></div>
+                                <div class="template-body"></div>
+                            </div>
+                            <span>Creative</span>
+                        </div>
+                        <div class="template-item">
+                            <div class="template-preview modern">
+                                <div class="template-header"></div>
+                                <div class="template-body"></div>
+                            </div>
+                            <span>Modern</span>
+                        </div>
+                        <div class="template-item">
+                            <div class="template-preview minimal">
+                                <div class="template-header"></div>
+                                <div class="template-body"></div>
+                            </div>
+                            <span>Minimal</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tool-section">
+                    <h3>Quick Actions</h3>
+                    <div class="action-buttons">
+                        <button class="btn btn-outline">
+                            <i data-lucide="upload"></i>
+                            Import Resume
+                        </button>
+                        <button class="btn btn-outline">
+                            <i data-lucide="download"></i>
+                            Download PDF
+                        </button>
+                        <button class="btn btn-outline">
+                            <i data-lucide="eye"></i>
+                            Preview
+                        </button>
+                        <button class="btn btn-primary">
+                            <i data-lucide="save"></i>
+                            Save Resume
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resume Editor -->
+            <div class="resume-editor">
+                <div class="editor-tabs">
+                    <button class="editor-tab active" data-tab="content">
+                        <i data-lucide="edit-3"></i>
+                        Content
+                    </button>
+                    <button class="editor-tab" data-tab="styling">
+                        <i data-lucide="palette"></i>
+                        Styling
+                    </button>
+                    <button class="editor-tab" data-tab="preview">
+                        <i data-lucide="eye"></i>
+                        Preview
+                    </button>
+                </div>
+
+                <!-- Content Editor -->
+                <div class="editor-panel active" id="content-panel">
+                    <div class="resume-section">
+                        <div class="section-header">
+                            <h3>Personal Information</h3>
+                            <button class="add-field-btn" type="button">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </div>
+                        <div class="section-content">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <input type="text" value="Manav Tiwari" class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label>Job Title</label>
+                                    <input type="text" value="Frontend Developer" class="form-input">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" value="manav.tiwari@email.com" class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <input type="tel" value="+1 (555) 123-4567" class="form-input">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Location</label>
+                                <input type="text" value="San Francisco, CA" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label>LinkedIn</label>
+                                <input type="url" value="linkedin.com/in/manavtiwari" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label>Professional Summary</label>
+                                <textarea rows="4" class="form-input">Experienced Frontend Developer with 5+ years of expertise in building responsive web applications using modern JavaScript frameworks. Passionate about creating user-friendly interfaces and optimizing performance.</textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resume-section">
+                        <div class="section-header">
+                            <h3>Work Experience</h3>
+                            <button class="add-field-btn" type="button">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </div>
+                        <div class="section-content">
+                            <div class="experience-item">
+                                <div class="experience-header">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label>Job Title</label>
+                                            <input type="text" value="Senior Frontend Developer" class="form-input">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Company</label>
+                                            <input type="text" value="TechCorp Inc." class="form-input">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label>Start Date</label>
+                                            <input type="month" value="2022-01" class="form-input">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>End Date</label>
+                                            <input type="month" value="" class="form-input" placeholder="Present">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea rows="3" class="form-input">Led frontend development for multiple web applications, mentored junior developers, and implemented best practices for code quality and performance.</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Key Achievements</label>
+                                    <textarea rows="2" class="form-input" placeholder="List your key achievements and contributions..."></textarea>
+                                </div>
+                                <button class="remove-item-btn" type="button">
+                                    <i data-lucide="trash-2"></i>
+                                    Remove
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resume-section">
+                        <div class="section-header">
+                            <h3>Skills</h3>
+                            <button class="add-field-btn" type="button">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </div>
+                        <div class="section-content">
+                            <div class="skills-editor">
+                                <div class="skill-category">
+                                    <h4>Frontend Development</h4>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">
+                                            React
+                                            <button class="remove-skill" type="button">×</button>
+                                        </span>
+                                        <span class="skill-tag">
+                                            Vue.js
+                                            <button class="remove-skill" type="button">×</button>
+                                        </span>
+                                        <span class="skill-tag">
+                                            JavaScript
+                                            <button class="remove-skill" type="button">×</button>
+                                        </span>
+                                        <span class="skill-tag">
+                                            TypeScript
+                                            <button class="remove-skill" type="button">×</button>
+                                        </span>
+                                    </div>
+                                    <div class="add-skill">
+                                        <input type="text" placeholder="Add a skill..." class="form-input">
+                                        <button class="btn btn-sm btn-outline">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resume-section">
+                        <div class="section-header">
+                            <h3>Education</h3>
+                            <button class="add-field-btn" type="button">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </div>
+                        <div class="section-content">
+                            <div class="education-item">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Degree</label>
+                                        <input type="text" value="Bachelor of Science in Computer Science" class="form-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Institution</label>
+                                        <input type="text" value="University of California, Berkeley" class="form-input">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Start Date</label>
+                                        <input type="month" value="2016-09" class="form-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>End Date</label>
+                                        <input type="month" value="2020-05" class="form-input">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea rows="2" class="form-input">Graduated with honors. Focused on software engineering and web development.</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Styling Editor -->
+                <div class="editor-panel" id="styling-panel">
+                    <div class="styling-section">
+                        <h3>Typography</h3>
+                        <div class="form-group">
+                            <label>Font Family</label>
+                            <select class="form-select">
+                                <option value="arial">Arial</option>
+                                <option value="helvetica" selected>Helvetica</option>
+                                <option value="georgia">Georgia</option>
+                                <option value="times">Times New Roman</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Font Size</label>
+                            <select class="form-select">
+                                <option value="12">12px</option>
+                                <option value="14" selected>14px</option>
+                                <option value="16">16px</option>
+                                <option value="18">18px</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="styling-section">
+                        <h3>Colors</h3>
+                        <div class="form-group">
+                            <label>Primary Color</label>
+                            <input type="color" value="#3b82f6" class="color-picker">
+                        </div>
+                        <div class="form-group">
+                            <label>Text Color</label>
+                            <input type="color" value="#1f2937" class="color-picker">
+                        </div>
+                        <div class="form-group">
+                            <label>Background Color</label>
+                            <input type="color" value="#ffffff" class="color-picker">
+                        </div>
+                    </div>
+
+                    <div class="styling-section">
+                        <h3>Layout</h3>
+                        <div class="form-group">
+                            <label>Page Width</label>
+                            <select class="form-select">
+                                <option value="narrow">Narrow</option>
+                                <option value="standard" selected>Standard</option>
+                                <option value="wide">Wide</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Spacing</label>
+                            <select class="form-select">
+                                <option value="compact">Compact</option>
+                                <option value="normal" selected>Normal</option>
+                                <option value="spacious">Spacious</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preview Panel -->
+                <div class="editor-panel" id="preview-panel">
+                    <div class="resume-preview">
+                        <div class="preview-header">
+                            <h3>Resume Preview</h3>
+                            <div class="preview-actions">
+                                <button class="btn btn-outline btn-sm">
+                                    <i data-lucide="zoom-in"></i>
+                                    Zoom In
+                                </button>
+                                <button class="btn btn-outline btn-sm">
+                                    <i data-lucide="zoom-out"></i>
+                                    Zoom Out
+                                </button>
+                                <button class="btn btn-primary btn-sm">
+                                    <i data-lucide="download"></i>
+                                    Download PDF
+                                </button>
+                            </div>
+                        </div>
+                        <div class="preview-content" id="resume-preview">
+                            <!-- Resume preview will be rendered here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="../js/main.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Editor tab switching
+        document.querySelectorAll('.editor-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and panels
+                document.querySelectorAll('.editor-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.editor-panel').forEach(p => p.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                // Show corresponding panel
+                const targetPanel = document.getElementById(`${tab.dataset.tab}-panel`);
+                if (targetPanel) {
+                    targetPanel.classList.add('active');
+                }
+            });
+        });
+        
+        // Template selection
+        document.querySelectorAll('.template-item').forEach(template => {
+            template.addEventListener('click', () => {
+                document.querySelectorAll('.template-item').forEach(t => t.classList.remove('active'));
+                template.classList.add('active');
+                // Update resume preview with selected template
+                updateResumePreview();
+            });
+        });
+        
+        // Add new experience section
+        document.querySelectorAll('.add-field-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const section = btn.closest('.resume-section');
+                const sectionContent = section.querySelector('.section-content');
+                
+                if (section.querySelector('.experience-item')) {
+                    // Clone existing experience item
+                    const newItem = section.querySelector('.experience-item').cloneNode(true);
+                    // Clear the values
+                    newItem.querySelectorAll('input, textarea').forEach(input => {
+                        input.value = '';
+                    });
+                    sectionContent.appendChild(newItem);
+                }
+            });
+        });
+        
+        // Remove experience item
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.remove-item-btn')) {
+                const item = e.target.closest('.experience-item');
+                if (document.querySelectorAll('.experience-item').length > 1) {
+                    item.remove();
+                }
+            }
+        });
+        
+        // Remove skill tag
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.remove-skill')) {
+                e.target.closest('.skill-tag').remove();
+            }
+        });
+        
+        // Add skill
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.add-skill .btn')) {
+                const addSkillContainer = e.target.closest('.add-skill');
+                const input = addSkillContainer.querySelector('input');
+                const skillName = input.value.trim();
+                
+                if (skillName) {
+                    const skillTag = document.createElement('span');
+                    skillTag.className = 'skill-tag';
+                    skillTag.innerHTML = `
+                        ${skillName}
+                        <button class="remove-skill" type="button">×</button>
+                    `;
+                    
+                    const skillTags = addSkillContainer.previousElementSibling;
+                    skillTags.appendChild(skillTag);
+                    input.value = '';
+                }
+            }
+        });
+        
+        // Update resume preview
+        function updateResumePreview() {
+            const preview = document.getElementById('resume-preview');
+            // This would generate the actual resume HTML based on the form data
+            preview.innerHTML = `
+                <div class="resume-template">
+                    <div class="resume-header">
+                        <h1>Manav Tiwari</h1>
+                        <p>Frontend Developer</p>
+                        <div class="contact-info">
+                            <span>manav.tiwari@email.com</span>
+                            <span>+1 (555) 123-4567</span>
+                            <span>San Francisco, CA</span>
+                        </div>
+                    </div>
+                    <div class="resume-body">
+                        <p>Experienced Frontend Developer with 5+ years of expertise...</p>
+                        <!-- More resume content would be generated here -->
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Initialize resume preview
+        document.addEventListener('DOMContentLoaded', () => {
+            updateResumePreview();
+        });
+    </script>
+</body>
+</html>

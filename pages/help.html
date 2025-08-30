@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support - ResumeBERT</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    <div id="sidebar-container"></div>
+    
+    <main class="main-content">
+        <div class="page-header">
+            <h1>Help & Support</h1>
+            <p>Find answers to common questions and get the help you need</p>
+        </div>
+
+        <div class="help-container">
+            <!-- Quick Help -->
+            <div class="quick-help">
+                <div class="help-card">
+                    <div class="help-icon">
+                        <i data-lucide="search"></i>
+                    </div>
+                    <h3>Search Help</h3>
+                    <p>Can't find what you're looking for? Search our knowledge base</p>
+                    <div class="search-help">
+                        <input type="text" placeholder="Search for help..." class="help-search-input">
+                        <button class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+                
+                <div class="help-card">
+                    <div class="help-icon">
+                        <i data-lucide="mail"></i>
+                    </div>
+                    <h3>Contact Support</h3>
+                    <p>Need personalized help? Our support team is here for you</p>
+                    <button class="btn btn-outline">Contact Us</button>
+                </div>
+                
+                <div class="help-card">
+                    <div class="help-icon">
+                        <i data-lucide="message-circle"></i>
+                    </div>
+                    <h3>Live Chat</h3>
+                    <p>Chat with our support team in real-time</p>
+                    <button class="btn btn-outline">Start Chat</button>
+                </div>
+            </div>
+
+            <!-- FAQ Categories -->
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-categories">
+                    <button class="faq-category active" data-category="getting-started">
+                        <i data-lucide="play"></i>
+                        Getting Started
+                    </button>
+                    <button class="faq-category" data-category="profile">
+                        <i data-lucide="user"></i>
+                        Profile & Resume
+                    </button>
+                    <button class="faq-category" data-category="job-search">
+                        <i data-lucide="briefcase"></i>
+                        Job Search
+                    </button>
+                    <button class="faq-category" data-category="applications">
+                        <i data-lucide="file-text"></i>
+                        Applications
+                    </button>
+                    <button class="faq-category" data-category="account">
+                        <i data-lucide="key"></i>
+                        Account & Billing
+                    </button>
+                </div>
+
+                <!-- FAQ Content -->
+                <div class="faq-content">
+                    <!-- Getting Started FAQ -->
+                    <div class="faq-panel active" id="getting-started-panel">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>How do I create an account on ResumeBERT?</h4>
+                                <i data-lucide="chevron-down" class="faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Creating an account is simple! Click the "Sign Up" button on our homepage and fill in your basic information. You can also sign up using your Google or LinkedIn account for faster registration.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>What information do I need to provide during registration?</h4>
+                                <i data-lucide="chevron-down" class="faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We require your name, email address, and a password. You can also optionally provide your current job title and location to help us personalize your experience from the start.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>How does the AI matching system work?</h4>
+                                <i data-lucide="chevron-down" class="faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our AI analyzes your skills, experience, and preferences to find the best job matches. It considers factors like required skills, experience level, location preferences, and company culture to provide personalized recommendations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile & Resume FAQ -->
+                    <div class="faq-panel" id="profile-panel">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>How do I upload my resume?</h4>
+                                <i data-lucide="chevron-down" class="faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Go to your Profile page and click on the "Upload Resume" button. We support PDF, DOC, and DOCX formats. You can also copy and paste your resume content directly into our resume builder.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>Can I edit my profile after creating it?</h4>
+                                <i data-lucide="chevron-down" class="faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes! You can edit your profile at any time. Go to your Profile page and click the "Edit Profile" button. All changes are saved automatically, and you can update your information as often as needed.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>How do I add skills to my profile?</h4>
+                                <i data-lucide="chevron-down" class="faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>In your Profile settings, go to the Skills section and click "Add Skill." You can type in your skills or select from our suggested skill list. You can also rate your proficiency level for each skill.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job Search FAQ -->
+                    <div class="faq-panel" id="job-search-panel">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>How do I search for jobs?</h4>
+                                <i data-lucide="chevron-down" class="faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Use the search bar at the top of the Jobs page to search by keywords, company names, or skills. You can also use our advanced filters to narrow down results by location, job type, experience level, and salary range.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>What does the match score mean?</h4>
+                                <i data-lucide="chevron-down" class="faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>The match score indicates how well a job aligns with your profile. It's calculated based on your skills, experience, preferences, and the job requirements. Higher scores mean better matches!</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>How do I save jobs for later?</h4>
+                                <i data-lucide="chevron-down" class="faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Click the bookmark icon on any job listing to save it to your favorites. You can access all saved jobs from your Dashboard under the "Saved Jobs" section.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Applications FAQ -->
+                    <div class="faq-panel" id="applications-panel">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>How do I apply for a job?</h4>
+                                <i data-lucide="chevron-down" class="faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Click the "Apply Now" button on any job listing. You'll be prompted to upload your resume (if not already uploaded), write a cover letter, and confirm your application details.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>Can I track my application status?</h4>
+                                <i data-lucide="chevron-down" class="faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes! Go to your Applications page to see the status of all your applications. You'll receive email notifications when there are updates, and you can also check the timeline for each application.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>How do I withdraw an application?</h4>
+                                <i data-lucide="chevron-down" class="faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Go to your Applications page, find the application you want to withdraw, and click the "Withdraw" button. Note that you cannot withdraw an application after it has been reviewed by the employer.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Account & Billing FAQ -->
+                    <div class="faq-panel" id="account-panel">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>How do I change my password?</h4>
+                                <i data-lucide="chevron-down" class="faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Go to Settings > Privacy & Security > Account Security. Enter your current password and then your new password twice to confirm the change.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>What's included in the Premium plan?</h4>
+                                <i data-lucide="chevron-down" class="faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Premium includes unlimited job applications, advanced AI matching, priority support, detailed analytics, and access to exclusive job listings. You can upgrade anytime from your Account settings.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>How do I cancel my subscription?</h4>
+                                <i data-lucide="chevron-down" class="faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Go to Settings > Account > Subscription and click "Cancel Subscription." Your Premium features will remain active until the end of your current billing period.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Support -->
+            <div class="contact-support">
+                <h2>Still Need Help?</h2>
+                <p>Our support team is here to help you succeed</p>
+                
+                <div class="support-options">
+                    <div class="support-option">
+                        <div class="support-icon">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <h4>Email Support</h4>
+                        <p>Send us a detailed message and we'll get back to you within 24 hours</p>
+                        <a href="mailto:support@resumebert.com" class="btn btn-outline">Send Email</a>
+                    </div>
+                    
+                    <div class="support-option">
+                        <div class="support-icon">
+                            <i data-lucide="message-circle"></i>
+                        </div>
+                        <h4>Live Chat</h4>
+                        <p>Chat with our support team in real-time during business hours</p>
+                        <button class="btn btn-outline">Start Chat</button>
+                    </div>
+                    
+                    <div class="support-option">
+                        <div class="support-icon">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <h4>Phone Support</h4>
+                        <p>Call us directly for immediate assistance</p>
+                        <a href="tel:+1-555-123-4567" class="btn btn-outline">Call Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Help Resources -->
+            <div class="help-resources">
+                <h2>Additional Resources</h2>
+                
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i data-lucide="book-open"></i>
+                        </div>
+                        <h4>User Guide</h4>
+                        <p>Comprehensive guide to using all ResumeBERT features</p>
+                        <a href="#" class="resource-link">Read Guide</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i data-lucide="video"></i>
+                        </div>
+                        <h4>Video Tutorials</h4>
+                        <p>Step-by-step video guides for common tasks</p>
+                        <a href="#" class="resource-link">Watch Videos</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <h4>Community Forum</h4>
+                        <p>Connect with other users and share tips</p>
+                        <a href="#" class="resource-link">Join Forum</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i data-lucide="file-text"></i>
+                        </div>
+                        <h4>API Documentation</h4>
+                        <p>Technical documentation for developers</p>
+                        <a href="#" class="resource-link">View Docs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="../js/main.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // FAQ category switching
+        document.querySelectorAll('.faq-category').forEach(category => {
+            category.addEventListener('click', () => {
+                // Remove active class from all categories and panels
+                document.querySelectorAll('.faq-category').forEach(c => c.classList.remove('active'));
+                document.querySelectorAll('.faq-panel').forEach(p => p.classList.remove('active'));
+                
+                // Add active class to clicked category
+                category.classList.add('active');
+                
+                // Show corresponding panel
+                const targetPanel = document.getElementById(`${category.dataset.category}-panel`);
+                if (targetPanel) {
+                    targetPanel.classList.add('active');
+                }
+            });
+        });
+        
+        // FAQ item toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const answer = question.nextElementSibling;
+                const toggle = question.querySelector('.faq-toggle');
+                
+                // Toggle active state
+                faqItem.classList.toggle('active');
+                
+                // Rotate toggle icon
+                if (faqItem.classList.contains('active')) {
+                    toggle.style.transform = 'rotate(180deg)';
+                } else {
+                    toggle.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+        
+        // Help search functionality
+        document.querySelector('.help-search-input').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                const searchTerm = e.target.value.trim();
+                if (searchTerm) {
+                    // Implement search functionality
+                    console.log('Searching for:', searchTerm);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

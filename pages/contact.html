@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CareerConnect</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/landing.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    
+    <div class="dashboard-container">
+        <div id="sidebar-container"></div>
+        
+        <main class="main-content">
+            <div class="page-header">
+                <h1>Contact Us</h1>
+                <p>Get in touch with our team for support and inquiries</p>
+            </div>
+
+            <!-- Contact Information -->
+            <section class="contact-info">
+                <div class="section-header">
+                    <h2>Get in Touch</h2>
+                    <p>We're here to help with any questions or concerns</p>
+                </div>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div class="method-content">
+                            <h3>Email Support</h3>
+                            <p>support@careerconnect.com</p>
+                            <span class="response-time">Response within 24 hours</span>
+                        </div>
+                        <button class="btn btn-primary">Send Email</button>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i data-lucide="message-circle"></i>
+                        </div>
+                        <div class="method-content">
+                            <h3>Live Chat</h3>
+                            <p>Available during business hours</p>
+                            <span class="response-time">Instant response</span>
+                        </div>
+                        <button class="btn btn-primary">Start Chat</button>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <div class="method-content">
+                            <h3>Phone Support</h3>
+                            <p>+1 (555) 123-4567</p>
+                            <span class="response-time">Mon-Fri, 9AM-6PM EST</span>
+                        </div>
+                        <button class="btn btn-primary">Call Now</button>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i data-lucide="help-circle"></i>
+                        </div>
+                        <div class="method-content">
+                            <h3>Help Center</h3>
+                            <p>Browse our knowledge base</p>
+                            <span class="response-time">Self-service support</span>
+                        </div>
+                        <button class="btn btn-primary">Visit Help Center</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form -->
+            <section class="contact-form-section">
+                <div class="section-header">
+                    <h2>Send us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you</p>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="billing">Billing Question</option>
+                            <option value="feature">Feature Request</option>
+                            <option value="bug">Bug Report</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="priority">Priority Level</label>
+                        <select id="priority" name="priority">
+                            <option value="low">Low - General question</option>
+                            <option value="medium" selected>Medium - Need assistance</option>
+                            <option value="high">High - Urgent issue</option>
+                            <option value="critical">Critical - System down</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Please describe your inquiry or issue in detail..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="attachments">Attachments</label>
+                        <input type="file" id="attachments" name="attachments" multiple>
+                        <small>You can attach screenshots, documents, or other files (max 10MB total)</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span class="checkmark"></span>
+                            Subscribe to our newsletter for updates and career tips
+                        </label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i data-lucide="send"></i>
+                            Send Message
+                        </button>
+                        <button type="reset" class="btn btn-secondary">Clear Form</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="contact-faq">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Quick answers to common questions</p>
+                </div>
+                
+                <div class="faq-items">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I reset my password?</h3>
+                            <button class="faq-toggle">
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Click on "Forgot Password" on the login page, enter your email address, and follow the instructions sent to your inbox.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I change my email address?</h3>
+                            <button class="faq-toggle">
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, you can update your email address in your profile settings. You'll need to verify the new email address before the change takes effect.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I delete my account?</h3>
+                            <button class="faq-toggle">
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Go to your account settings and select "Delete Account" at the bottom. Please note that this action cannot be undone.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What payment methods do you accept?</h3>
+                            <button class="faq-toggle">
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers for annual plans.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Office Locations -->
+            <section class="office-locations">
+                <div class="section-header">
+                    <h2>Our Offices</h2>
+                    <p>Visit us at one of our locations</p>
+                </div>
+                
+                <div class="locations-grid">
+                    <div class="location-card">
+                        <div class="location-header">
+                            <h3>Headquarters</h3>
+                            <span class="location-type">Main Office</span>
+                        </div>
+                        <div class="location-details">
+                            <p><i data-lucide="map-pin"></i> 123 Tech Street, San Francisco, CA 94105</p>
+                            <p><i data-lucide="phone"></i> +1 (555) 123-4567</p>
+                            <p><i data-lucide="mail"></i> sf@careerconnect.com</p>
+                            <p><i data-lucide="clock"></i> Mon-Fri: 9AM-6PM PST</p>
+                        </div>
+                        <button class="btn btn-outline">Get Directions</button>
+                    </div>
+
+                    <div class="location-card">
+                        <div class="location-header">
+                            <h3>New York Office</h3>
+                            <span class="location-type">East Coast Hub</span>
+                        </div>
+                        <div class="location-details">
+                            <p><i data-lucide="map-pin"></i> 456 Innovation Ave, New York, NY 10001</p>
+                            <p><i data-lucide="phone"></i> +1 (555) 987-6543</p>
+                            <p><i data-lucide="mail"></i> nyc@careerconnect.com</p>
+                            <p><i data-lucide="clock"></i> Mon-Fri: 9AM-6PM EST</p>
+                        </div>
+                        <button class="btn btn-outline">Get Directions</button>
+                    </div>
+
+                    <div class="location-card">
+                        <div class="location-header">
+                            <h3>Remote Team</h3>
+                            <span class="location-type">Global</span>
+                        </div>
+                        <div class="location-details">
+                            <p><i data-lucide="globe"></i> Worldwide remote team</p>
+                            <p><i data-lucide="clock"></i> 24/7 support via email</p>
+                            <p><i data-lucide="users"></i> 50+ team members</p>
+                            <p><i data-lucide="message-circle"></i> Slack & Zoom available</p>
+                        </div>
+                        <button class="btn btn-outline">Join Our Team</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Response Time -->
+            <section class="response-time">
+                <div class="section-header">
+                    <h2>Our Response Times</h2>
+                    <p>We're committed to getting back to you quickly</p>
+                </div>
+                
+                <div class="response-metrics">
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <h3>Email Support</h3>
+                        <span class="metric-value">24 hours</span>
+                        <p>Average response time</p>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i data-lucide="message-circle"></i>
+                        </div>
+                        <h3>Live Chat</h3>
+                        <span class="metric-value">2 minutes</span>
+                        <p>Average wait time</p>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <h3>Phone Support</h3>
+                        <span class="metric-value">5 minutes</span>
+                        <p>Average hold time</p>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i data-lucide="help-circle"></i>
+                        </div>
+                        <h3>Help Center</h3>
+                        <span class="metric-value">Instant</span>
+                        <p>Self-service support</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Contact form submission
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const firstName = formData.get('firstName');
+            const email = formData.get('email');
+            const subject = formData.get('subject');
+            
+            alert(`Thank you for your message, ${firstName}!\n\nWe've received your inquiry about "${subject}" and will respond to ${email} within 24 hours.\n\nYour message has been submitted successfully.`);
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Contact method actions
+        document.querySelectorAll('.contact-method .btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const method = this.closest('.contact-method').querySelector('h3').textContent;
+                const action = this.textContent;
+                
+                if (action === 'Send Email') {
+                    window.open('mailto:support@careerconnect.com', '_blank');
+                } else if (action === 'Start Chat') {
+                    alert('Live chat will open in a new window. Please wait while we connect you with a support representative.');
+                } else if (action === 'Call Now') {
+                    window.open('tel:+15551234567', '_blank');
+                } else if (action === 'Visit Help Center') {
+                    alert('Redirecting to our comprehensive help center with articles, tutorials, and troubleshooting guides.');
+                }
+            });
+        });
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const faqItem = this.closest('.faq-item');
+                const answer = faqItem.querySelector('.faq-answer');
+                const icon = this.querySelector('i');
+                
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    answer.style.display = 'block';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Location card actions
+        document.querySelectorAll('.location-card .btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const locationName = this.closest('.location-card').querySelector('h3').textContent;
+                const action = this.textContent;
+                
+                if (action === 'Get Directions') {
+                    alert(`Getting directions to ${locationName}.\n\nThis will open Google Maps with the office location.`);
+                } else if (action === 'Join Our Team') {
+                    alert(`Interested in joining our remote team?\n\nVisit our careers page to see open positions and learn about our company culture.`);
+                }
+            });
+        });
+
+        // Form field validation
+        document.querySelectorAll('.contact-form input, .contact-form select, .contact-form textarea').forEach(field => {
+            field.addEventListener('blur', function() {
+                if (this.hasAttribute('required') && !this.value.trim()) {
+                    this.classList.add('error');
+                } else {
+                    this.classList.remove('error');
+                }
+            });
+            
+            field.addEventListener('input', function() {
+                if (this.classList.contains('error') && this.value.trim()) {
+                    this.classList.remove('error');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

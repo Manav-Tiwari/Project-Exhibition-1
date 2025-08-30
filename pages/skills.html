@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - CareerConnect</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/landing.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    
+    <div class="dashboard-container">
+        <div id="sidebar-container"></div>
+        
+        <main class="main-content">
+            <div class="page-header">
+                <h1>Skills Management</h1>
+                <p>Track, develop, and showcase your professional skills</p>
+            </div>
+
+            <!-- Skills Overview -->
+            <section class="skills-overview">
+                <div class="overview-cards">
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i data-lucide="target"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Total Skills</h3>
+                            <span class="overview-number">24</span>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i data-lucide="trending-up"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>In Progress</h3>
+                            <span class="overview-number">8</span>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i data-lucide="check-circle"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Mastered</h3>
+                            <span class="overview-number">12</span>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i data-lucide="star"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Top Skills</h3>
+                            <span class="overview-number">5</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Categories -->
+            <section class="skills-section">
+                <div class="section-header">
+                    <h2>Technical Skills</h2>
+                    <button class="btn btn-primary" onclick="openAddSkillModal()">
+                        <i data-lucide="plus"></i>
+                        Add Skill
+                    </button>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-info">
+                                <h3>JavaScript</h3>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-actions">
+                                <button class="btn-icon" onclick="editSkill('JavaScript')">
+                                    <i data-lucide="edit"></i>
+                                </button>
+                                <button class="btn-icon" onclick="deleteSkill('JavaScript')">
+                                    <i data-lucide="trash-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 95%"></div>
+                            </div>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">Frontend</span>
+                            <span class="tag">ES6+</span>
+                            <span class="tag">Frameworks</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-info">
+                                <h3>React</h3>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-actions">
+                                <button class="btn-icon" onclick="editSkill('React')">
+                                    <i data-lucide="edit"></i>
+                                </button>
+                                <button class="btn-icon" onclick="deleteSkill('React')">
+                                    <i data-lucide="trash-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">Frontend</span>
+                            <span class="tag">Hooks</span>
+                            <span class="tag">State Management</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-info">
+                                <h3>Node.js</h3>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-actions">
+                                <button class="btn-icon" onclick="editSkill('Node.js')">
+                                    <i data-lucide="edit"></i>
+                                </button>
+                                <button class="btn-icon" onclick="deleteSkill('Node.js')">
+                                    <i data-lucide="trash-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%"></div>
+                            </div>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">Backend</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">APIs</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-info">
+                                <h3>Python</h3>
+                                <span class="skill-level">Beginner</span>
+                            </div>
+                            <div class="skill-actions">
+                                <button class="btn-icon" onclick="editSkill('Python')">
+                                    <i data-lucide="edit"></i>
+                                </button>
+                                <button class="btn-icon" onclick="deleteSkill('Python')">
+                                    <i data-lucide="trash-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 30%"></div>
+                            </div>
+                            <span>30%</span>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">Backend</span>
+                            <span class="tag">Data Science</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Soft Skills -->
+            <section class="skills-section">
+                <div class="section-header">
+                    <h2>Soft Skills</h2>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-info">
+                                <h3>Communication</h3>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-actions">
+                                <button class="btn-icon" onclick="editSkill('Communication')">
+                                    <i data-lucide="edit"></i>
+                                </button>
+                                <button class="btn-icon" onclick="deleteSkill('Communication')">
+                                    <i data-lucide="trash-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%"></div>
+                            </div>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">Leadership</span>
+                            <span class="tag">Presentation</span>
+                            <span class="tag">Teamwork</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-info">
+                                <h3>Problem Solving</h3>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-actions">
+                                <button class="btn-icon" onclick="editSkill('Problem Solving')">
+                                    <i data-lucide="edit"></i>
+                                </button>
+                                <button class="btn-icon" onclick="deleteSkill('Problem Solving')">
+                                    <i data-lucide="trash-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">Analytical</span>
+                            <span class="tag">Critical Thinking</span>
+                            <span class="tag">Innovation</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skill Assessment -->
+            <section class="skills-section">
+                <div class="section-header">
+                    <h2>Skill Assessment</h2>
+                    <p>Test your knowledge and track improvement</p>
+                </div>
+                
+                <div class="assessment-cards">
+                    <div class="assessment-card">
+                        <div class="assessment-header">
+                            <h3>JavaScript Fundamentals</h3>
+                            <span class="assessment-status">Available</span>
+                        </div>
+                        <p>Test your JavaScript knowledge with 20 questions</p>
+                        <div class="assessment-meta">
+                            <span>⏱️ 30 minutes</span>
+                            <span>📝 20 questions</span>
+                            <span>🎯 Intermediate</span>
+                        </div>
+                        <button class="btn btn-primary">Start Assessment</button>
+                    </div>
+
+                    <div class="assessment-card">
+                        <div class="assessment-header">
+                            <h3>React Best Practices</h3>
+                            <span class="assessment-status">Completed</span>
+                        </div>
+                        <p>Advanced React concepts and patterns</p>
+                        <div class="assessment-meta">
+                            <span>✅ Score: 85%</span>
+                            <span>📅 2 days ago</span>
+                            <span>🎯 Advanced</span>
+                        </div>
+                        <button class="btn btn-secondary">Retake</button>
+                    </div>
+
+                    <div class="assessment-card">
+                        <div class="assessment-header">
+                            <h3>System Design</h3>
+                            <span class="assessment-status">Locked</span>
+                        </div>
+                        <p>Unlock by completing prerequisite skills</p>
+                        <div class="assessment-meta">
+                            <span>🔒 Requires: Node.js (80%)</span>
+                            <span>📝 15 questions</span>
+                            <span>🎯 Expert</span>
+                        </div>
+                        <button class="btn btn-outline" disabled>Locked</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Paths -->
+            <section class="skills-section">
+                <div class="section-header">
+                    <h2>Learning Paths</h2>
+                    <p>Structured learning to master skill categories</p>
+                </div>
+                
+                <div class="learning-paths">
+                    <div class="path-card">
+                        <div class="path-header">
+                            <h3>Full Stack Development</h3>
+                            <span class="path-progress">65% Complete</span>
+                        </div>
+                        <div class="path-progress-bar">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                        <div class="path-skills">
+                            <span class="skill-badge completed">HTML/CSS</span>
+                            <span class="skill-badge completed">JavaScript</span>
+                            <span class="skill-badge completed">React</span>
+                            <span class="skill-badge in-progress">Node.js</span>
+                            <span class="skill-badge locked">Database Design</span>
+                            <span class="skill-badge locked">DevOps</span>
+                        </div>
+                        <button class="btn btn-primary">Continue Learning</button>
+                    </div>
+
+                    <div class="path-card">
+                        <div class="path-header">
+                            <h3>Data Science</h3>
+                            <span class="path-progress">20% Complete</span>
+                        </div>
+                        <div class="path-progress-bar">
+                            <div class="progress-fill" style="width: 20%"></div>
+                        </div>
+                        <div class="path-skills">
+                            <span class="skill-badge in-progress">Python</span>
+                            <span class="skill-badge locked">Statistics</span>
+                            <span class="skill-badge locked">Machine Learning</span>
+                            <span class="skill-badge locked">Data Visualization</span>
+                        </div>
+                        <button class="btn btn-primary">Continue Learning</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Add Skill Modal -->
+    <div id="addSkillModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Skill</h2>
+                <button class="close-btn" onclick="closeAddSkillModal()">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <form class="skill-form">
+                <div class="form-group">
+                    <label for="skillName">Skill Name</label>
+                    <input type="text" id="skillName" name="skillName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="skillCategory">Category</label>
+                    <select id="skillCategory" name="skillCategory" required>
+                        <option value="">Select Category</option>
+                        <option value="frontend">Frontend Development</option>
+                        <option value="backend">Backend Development</option>
+                        <option value="database">Database</option>
+                        <option value="devops">DevOps</option>
+                        <option value="soft-skills">Soft Skills</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="skillLevel">Current Level</label>
+                    <select id="skillLevel" name="skillLevel" required>
+                        <option value="">Select Level</option>
+                        <option value="beginner">Beginner (0-25%)</option>
+                        <option value="intermediate">Intermediate (26-50%)</option>
+                        <option value="advanced">Advanced (51-75%)</option>
+                        <option value="expert">Expert (76-100%)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="skillProgress">Progress (%)</label>
+                    <input type="range" id="skillProgress" name="skillProgress" min="0" max="100" value="25">
+                    <span id="progressValue">25%</span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="skillTags">Tags (comma-separated)</label>
+                    <input type="text" id="skillTags" name="skillTags" placeholder="e.g., Frontend, React, State Management">
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeAddSkillModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Skill</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Progress range input
+        const progressRange = document.getElementById('skillProgress');
+        const progressValue = document.getElementById('progressValue');
+        
+        if (progressRange && progressValue) {
+            progressRange.addEventListener('input', function() {
+                progressValue.textContent = this.value + '%';
+            });
+        }
+
+        // Modal functions
+        function openAddSkillModal() {
+            document.getElementById('addSkillModal').style.display = 'flex';
+        }
+
+        function closeAddSkillModal() {
+            document.getElementById('addSkillModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('addSkillModal');
+            if (event.target === modal) {
+                closeAddSkillModal();
+            }
+        }
+
+        // Skill form submission
+        document.querySelector('.skill-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const skillName = formData.get('skillName');
+            alert(`Skill "${skillName}" added successfully!`);
+            closeAddSkillModal();
+            this.reset();
+        });
+
+        // Skill actions
+        function editSkill(skillName) {
+            alert(`Editing skill: ${skillName}`);
+        }
+
+        function deleteSkill(skillName) {
+            if (confirm(`Are you sure you want to delete "${skillName}"?`)) {
+                alert(`Skill "${skillName}" deleted successfully!`);
+            }
+        }
+
+        // Assessment actions
+        document.querySelectorAll('.assessment-card .btn-primary').forEach(button => {
+            button.addEventListener('click', function() {
+                const assessmentTitle = this.closest('.assessment-card').querySelector('h3').textContent;
+                alert(`Starting assessment: ${assessmentTitle}`);
+            });
+        });
+
+        // Learning path actions
+        document.querySelectorAll('.path-card .btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const pathTitle = this.closest('.path-card').querySelector('h3').textContent;
+                alert(`Continuing learning path: ${pathTitle}`);
+            });
+        });
+    </script>
+</body>
+</html>

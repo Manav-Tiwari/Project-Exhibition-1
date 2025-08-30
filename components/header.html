@@ -1,0 +1,126 @@
+<header class="header">
+    <div class="header-container">
+        <div class="header-left">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">ResumeBERT</span>
+                <span class="logo-subtitle">AI Recruitment</span>
+            </a>
+        </div>
+        
+        <nav class="header-nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="pages/dashboard.html" class="nav-link">
+                        <i data-lucide="home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/jobs.html" class="nav-link">
+                        <i data-lucide="briefcase"></i>
+                        <span>Jobs</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/profile.html" class="nav-link">
+                        <i data-lucide="user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/applications.html" class="nav-link">
+                        <i data-lucide="file-text"></i>
+                        <span>Applications</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="header-right">
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <i data-lucide="search" class="search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search jobs, companies, skills...">
+                    <button class="search-clear" type="button">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
+                <div class="search-suggestions" id="search-suggestions"></div>
+            </div>
+            
+            <div class="notifications">
+                <button class="notification-btn" type="button">
+                    <i data-lucide="bell"></i>
+                    <span class="notification-badge">3</span>
+                </button>
+                <div class="notifications-dropdown" id="notifications-dropdown">
+                    <div class="notifications-header">
+                        <h3>Notifications</h3>
+                        <button class="mark-all-read">Mark all read</button>
+                    </div>
+                    <div class="notifications-list" id="notifications-list">
+                        <!-- Notifications will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="user-menu">
+                <button class="user-menu-btn" type="button" id="user-menu-btn">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" 
+                         alt="User Avatar" class="user-avatar">
+                    <span class="user-name">Manav Tiwari</span>
+                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                </button>
+                <div class="user-dropdown" id="user-dropdown">
+                    <div class="user-dropdown-header">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" 
+                             alt="User Avatar" class="user-dropdown-avatar">
+                        <div class="user-dropdown-info">
+                            <h4>Manav Tiwari</h4>
+                            <p>Frontend Developer</p>
+                        </div>
+                    </div>
+                    <ul class="user-dropdown-menu">
+                                                                <li><a href="profile.html"><i data-lucide="user"></i> My Profile</a></li>
+                        <li><a href="pages/settings.html"><i data-lucide="settings"></i> Settings</a></li>
+                        <li><a href="pages/help.html"><i data-lucide="help-circle"></i> Help & Support</a></li>
+                <li class="divider"></li>
+                <li><a href="../index.html" class="logout"><i data-lucide="log-out"></i> Sign Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <button class="mobile-menu-btn" type="button" id="mobile-menu-btn">
+            <i data-lucide="menu"></i>
+        </button>
+    </div>
+    
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-header">
+            <div class="mobile-user-info">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face" 
+                     alt="User Avatar" class="mobile-user-avatar">
+                <div>
+                    <h4>Manav Tiwari</h4>
+                    <p>Frontend Developer</p>
+                </div>
+            </div>
+            <button class="mobile-nav-close" type="button">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav-menu">
+            <ul>
+                <li><a href="pages/dashboard.html"><i data-lucide="home"></i> Dashboard</a></li>
+                <li><a href="pages/jobs.html"><i data-lucide="briefcase"></i> Jobs</a></li>
+                <li><a href="pages/profile.html"><i data-lucide="user"></i> Profile</a></li>
+                <li><a href="pages/applications.html"><i data-lucide="file-text"></i> Applications</a></li>
+                <li><a href="pages/settings.html"><i data-lucide="settings"></i> Settings</a></li>
+                <li><a href="pages/help.html"><i data-lucide="help-circle"></i> Help</a></li>
+                <li class="divider"></li>
+                <li><a href="../index.html" class="logout"><i data-lucide="log-out"></i> Sign Out</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>

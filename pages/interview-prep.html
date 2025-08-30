@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Preparation - CareerConnect</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/landing.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    
+    <div class="dashboard-container">
+        <div id="sidebar-container"></div>
+        
+        <main class="main-content">
+            <div class="page-header">
+                <h1>Interview Preparation</h1>
+                <p>Prepare for interviews with practice questions, tips, and resources</p>
+            </div>
+
+            <!-- Interview Overview -->
+            <section class="interview-overview">
+                <div class="overview-cards">
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i data-lucide="target"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Practice Sessions</h3>
+                            <span class="overview-number">15</span>
+                            <span class="overview-text">Completed</span>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i data-lucide="trending-up"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Success Rate</h3>
+                            <span class="overview-number">78%</span>
+                            <span class="overview-text">Questions Correct</span>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Total Time</h3>
+                            <span class="overview-number">8.5h</span>
+                            <span class="overview-text">Practice Time</span>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i data-lucide="star"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Confidence Score</h3>
+                            <span class="overview-number">85%</span>
+                            <span class="overview-text">Interview Ready</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interview Types -->
+            <section class="interview-section">
+                <div class="section-header">
+                    <h2>Interview Types</h2>
+                    <p>Prepare for different types of interviews</p>
+                </div>
+                
+                <div class="interview-types">
+                    <div class="type-card">
+                        <div class="type-icon">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <h3>Behavioral Interviews</h3>
+                        <p>Answer questions about past experiences and how you handled specific situations.</p>
+                        <div class="type-features">
+                            <span class="feature">STAR Method</span>
+                            <span class="feature">Experience Stories</span>
+                            <span class="feature">Problem Solving</span>
+                        </div>
+                        <button class="btn btn-primary">Start Practice</button>
+                    </div>
+
+                    <div class="type-card">
+                        <div class="type-icon">
+                            <i data-lucide="code"></i>
+                        </div>
+                        <h3>Technical Interviews</h3>
+                        <p>Demonstrate your technical skills through coding challenges and problem-solving.</p>
+                        <div class="type-features">
+                            <span class="feature">Coding Problems</span>
+                            <span class="feature">System Design</span>
+                            <span class="feature">Algorithms</span>
+                        </div>
+                        <button class="btn btn-primary">Start Practice</button>
+                    </div>
+
+                    <div class="type-card">
+                        <div class="type-icon">
+                            <i data-lucide="message-circle"></i>
+                        </div>
+                        <h3>Case Interviews</h3>
+                        <p>Solve business problems and demonstrate analytical thinking skills.</p>
+                        <div class="type-features">
+                            <span class="feature">Business Cases</span>
+                            <span class="feature">Market Analysis</span>
+                            <span class="feature">Strategy</span>
+                        </div>
+                        <button class="btn btn-primary">Start Practice</button>
+                    </div>
+
+                    <div class="type-card">
+                        <div class="type-icon">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <h3>Phone Interviews</h3>
+                        <p>Master phone interview techniques and preparation strategies.</p>
+                        <div class="type-features">
+                            <span class="feature">Voice Quality</span>
+                            <span class="feature">Environment Setup</span>
+                            <span class="feature">Communication</span>
+                        </div>
+                        <button class="btn btn-primary">Start Practice</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Practice Questions -->
+            <section class="interview-section">
+                <div class="section-header">
+                    <h2>Practice Questions</h2>
+                    <p>Test your knowledge with common interview questions</p>
+                </div>
+                
+                <div class="question-categories">
+                    <div class="category-tabs">
+                        <button class="tab-btn active" data-category="behavioral">Behavioral</button>
+                        <button class="tab-btn" data-category="technical">Technical</button>
+                        <button class="tab-btn" data-category="general">General</button>
+                        <button class="tab-btn" data-category="leadership">Leadership</button>
+                    </div>
+                    
+                    <div class="questions-container">
+                        <div class="question-set active" id="behavioral">
+                            <div class="question-card">
+                                <h3>Tell me about a time you faced a difficult challenge at work.</h3>
+                                <div class="question-tips">
+                                    <h4>Tips:</h4>
+                                    <ul>
+                                        <li>Use the STAR method (Situation, Task, Action, Result)</li>
+                                        <li>Focus on your problem-solving approach</li>
+                                        <li>Highlight what you learned</li>
+                                    </ul>
+                                </div>
+                                <div class="question-actions">
+                                    <button class="btn btn-outline">View Sample Answer</button>
+                                    <button class="btn btn-primary">Practice Answer</button>
+                                </div>
+                            </div>
+
+                            <div class="question-card">
+                                <h3>Describe a situation where you had to work with a difficult team member.</h3>
+                                <div class="question-tips">
+                                    <h4>Tips:</h4>
+                                    <ul>
+                                        <li>Focus on collaboration and communication</li>
+                                        <li>Show empathy and understanding</li>
+                                        <li>Demonstrate conflict resolution skills</li>
+                                    </ul>
+                                </div>
+                                <div class="question-actions">
+                                    <button class="btn btn-outline">View Sample Answer</button>
+                                    <button class="btn btn-primary">Practice Answer</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-set" id="technical">
+                            <div class="question-card">
+                                <h3>Explain the difference between REST and GraphQL APIs.</h3>
+                                <div class="question-tips">
+                                    <h4>Tips:</h4>
+                                    <ul>
+                                        <li>Compare data fetching approaches</li>
+                                        <li>Discuss over-fetching vs under-fetching</li>
+                                        <li>Mention use cases for each</li>
+                                    </ul>
+                                </div>
+                                <div class="question-actions">
+                                    <button class="btn btn-outline">View Sample Answer</button>
+                                    <button class="btn btn-primary">Practice Answer</button>
+                                </div>
+                            </div>
+
+                            <div class="question-card">
+                                <h3>How would you design a scalable database system?</h3>
+                                <div class="question-tips">
+                                    <h4>Tips:</h4>
+                                    <ul>
+                                        <li>Consider read/write patterns</li>
+                                        <li>Discuss partitioning strategies</li>
+                                        <li>Mention caching and CDN</li>
+                                    </ul>
+                                </div>
+                                <div class="question-actions">
+                                    <button class="btn btn-outline">View Sample Answer</button>
+                                    <button class="btn btn-primary">Practice Answer</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-set" id="general">
+                            <div class="question-card">
+                                <h3>Why do you want to work for this company?</h3>
+                                <div class="question-tips">
+                                    <h4>Tips:</h4>
+                                    <ul>
+                                        <li>Research the company thoroughly</li>
+                                        <li>Connect your values to company culture</li>
+                                        <li>Mention specific projects or initiatives</li>
+                                    </ul>
+                                </div>
+                                <div class="question-actions">
+                                    <button class="btn btn-outline">View Sample Answer</button>
+                                    <button class="btn btn-primary">Practice Answer</button>
+                                </div>
+                            </div>
+
+                            <div class="question-card">
+                                <h3>Where do you see yourself in 5 years?</h3>
+                                <div class="question-tips">
+                                    <h4>Tips:</h4>
+                                    <ul>
+                                        <li>Show ambition but be realistic</li>
+                                        <li>Connect to the role you're applying for</li>
+                                        <li>Demonstrate growth mindset</li>
+                                    </ul>
+                                </div>
+                                <div class="question-actions">
+                                    <button class="btn btn-outline">View Sample Answer</button>
+                                    <button class="btn btn-primary">Practice Answer</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-set" id="leadership">
+                            <div class="question-card">
+                                <h3>How do you motivate team members who are underperforming?</h3>
+                                <div class="question-tips">
+                                    <h4>Tips:</h4>
+                                    <ul>
+                                        <li>Focus on understanding root causes</li>
+                                        <li>Discuss coaching and mentoring approaches</li>
+                                        <li>Show empathy and support</li>
+                                    </ul>
+                                </div>
+                                <div class="question-actions">
+                                    <button class="btn btn-outline">View Sample Answer</button>
+                                    <button class="btn btn-primary">Practice Answer</button>
+                                </div>
+                            </div>
+
+                            <div class="question-card">
+                                <h3>Describe a time you had to make a difficult decision as a leader.</h3>
+                                <div class="question-tips">
+                                    <h4>Tips:</h4>
+                                    <ul>
+                                        <li>Show your decision-making process</li>
+                                        <li>Discuss stakeholder considerations</li>
+                                        <li>Highlight the outcome and lessons learned</li>
+                                    </ul>
+                                </div>
+                                <div class="question-actions">
+                                    <button class="btn btn-outline">View Sample Answer</button>
+                                    <button class="btn btn-primary">Practice Answer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interview Tips -->
+            <section class="interview-section">
+                <div class="section-header">
+                    <h2>Interview Tips & Best Practices</h2>
+                    <p>Essential advice to ace your interviews</p>
+                </div>
+                
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i data-lucide="research"></i>
+                        </div>
+                        <h3>Research the Company</h3>
+                        <p>Learn about the company's mission, values, recent news, and the role you're applying for.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i data-lucide="target"></i>
+                        </div>
+                        <h3>Prepare Your Stories</h3>
+                        <p>Have 3-5 specific examples ready that demonstrate your skills and achievements.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <h3>Practice Timing</h3>
+                        <p>Keep your answers concise (1-2 minutes) and practice with a timer.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i data-lucide="message-circle"></i>
+                        </div>
+                        <h3>Ask Questions</h3>
+                        <p>Prepare thoughtful questions about the role, team, and company culture.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i data-lucide="smile"></i>
+                        </div>
+                        <h3>Body Language</h3>
+                        <p>Maintain eye contact, sit up straight, and use confident gestures.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i data-lucide="check-circle"></i>
+                        </div>
+                        <h3>Follow Up</h3>
+                        <p>Send a thank-you email within 24 hours after the interview.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mock Interviews -->
+            <section class="interview-section">
+                <div class="section-header">
+                    <h2>Mock Interviews</h2>
+                    <p>Practice with realistic interview simulations</p>
+                </div>
+                
+                <div class="mock-interviews">
+                    <div class="mock-interview-card">
+                        <div class="mock-header">
+                            <h3>Frontend Developer Mock Interview</h3>
+                            <span class="difficulty medium">Medium</span>
+                        </div>
+                        <div class="mock-details">
+                            <p>Practice common frontend development questions and coding challenges.</p>
+                            <div class="mock-meta">
+                                <span>⏱️ 45 minutes</span>
+                                <span>📝 15 questions</span>
+                                <span>💻 3 coding problems</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Start Mock Interview</button>
+                    </div>
+
+                    <div class="mock-interview-card">
+                        <div class="mock-header">
+                            <h3>Product Manager Mock Interview</h3>
+                            <span class="difficulty hard">Hard</span>
+                        </div>
+                        <div class="mock-details">
+                            <p>Practice case studies, product strategy, and stakeholder management questions.</p>
+                            <div class="mock-meta">
+                                <span>⏱️ 60 minutes</span>
+                                <span>📝 20 questions</span>
+                                <span>📊 2 case studies</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Start Mock Interview</button>
+                    </div>
+
+                    <div class="mock-interview-card">
+                        <div class="mock-header">
+                            <h3>Data Scientist Mock Interview</h3>
+                            <span class="difficulty hard">Hard</span>
+                        </div>
+                        <div class="mock-details">
+                            <p>Practice statistical analysis, machine learning, and data interpretation questions.</p>
+                            <div class="mock-meta">
+                                <span>⏱️ 75 minutes</span>
+                                <span>📝 25 questions</span>
+                                <span>📈 4 data problems</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Start Mock Interview</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resources -->
+            <section class="interview-section">
+                <div class="section-header">
+                    <h2>Additional Resources</h2>
+                    <p>Books, courses, and tools to improve your interview skills</p>
+                </div>
+                
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <h3>Cracking the Coding Interview</h3>
+                            <span class="resource-type">Book</span>
+                        </div>
+                        <p>Comprehensive guide to technical interviews with 189 programming questions.</p>
+                        <div class="resource-meta">
+                            <span>📖 687 pages</span>
+                            <span>⭐ 4.7/5</span>
+                            <span>🎯 Technical</span>
+                        </div>
+                        <button class="btn btn-primary">Get Book</button>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <h3>Behavioral Interview Mastery</h3>
+                            <span class="resource-type">Course</span>
+                        </div>
+                        <p>Master the STAR method and behavioral interview techniques.</p>
+                        <div class="resource-meta">
+                            <span>⏱️ 6 hours</span>
+                            <span>⭐ 4.8/5</span>
+                            <span>🎯 Behavioral</span>
+                        </div>
+                        <button class="btn btn-primary">Start Course</button>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <h3>Interview Practice App</h3>
+                            <span class="resource-type">Tool</span>
+                        </div>
+                        <p>Mobile app for practicing interview questions on the go.</p>
+                        <div class="resource-meta">
+                            <span>📱 iOS/Android</span>
+                            <span>⭐ 4.6/5</span>
+                            <span>🎯 All Types</span>
+                        </div>
+                        <button class="btn btn-primary">Download</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Tab switching for question categories
+        document.querySelectorAll('.tab-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all tabs and question sets
+                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.question-set').forEach(set => set.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Show corresponding question set
+                const category = this.dataset.category;
+                document.getElementById(category).classList.add('active');
+            });
+        });
+
+        // Question actions
+        document.querySelectorAll('.question-actions .btn-outline').forEach(button => {
+            button.addEventListener('click', function() {
+                const question = this.closest('.question-card').querySelector('h3').textContent;
+                alert(`Sample answer for: ${question}\n\nThis would show a detailed sample answer with key points and structure.`);
+            });
+        });
+
+        document.querySelectorAll('.question-actions .btn-primary').forEach(button => {
+            button.addEventListener('click', function() {
+                const question = this.closest('.question-card').querySelector('h3').textContent;
+                alert(`Practice mode for: ${question}\n\nThis would open a practice interface where you can record or type your answer.`);
+            });
+        });
+
+        // Interview type cards
+        document.querySelectorAll('.type-card .btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const interviewType = this.closest('.type-card').querySelector('h3').textContent;
+                alert(`Starting practice for: ${interviewType}\n\nThis would open a specialized practice session for this interview type.`);
+            });
+        });
+
+        // Mock interview cards
+        document.querySelectorAll('.mock-interview-card .btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const mockTitle = this.closest('.mock-interview-card').querySelector('h3').textContent;
+                alert(`Starting mock interview: ${mockTitle}\n\nThis would begin a timed mock interview session with realistic questions.`);
+            });
+        });
+
+        // Resource cards
+        document.querySelectorAll('.resource-card .btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const resourceTitle = this.closest('.resource-card').querySelector('h3').textContent;
+                alert(`Accessing resource: ${resourceTitle}\n\nThis would open the book, course, or download link.`);
+            });
+        });
+
+        // Tip cards interaction
+        document.querySelectorAll('.tip-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const tipTitle = this.querySelector('h3').textContent;
+                const tipDescription = this.querySelector('p').textContent;
+                alert(`${tipTitle}\n\n${tipDescription}\n\nClick for more detailed information and examples.`);
+            });
+        });
+    </script>
+</body>
+</html>

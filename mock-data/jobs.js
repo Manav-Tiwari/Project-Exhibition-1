@@ -1,0 +1,222 @@
+export const jobs = [
+    {
+        id: 'job101',
+        title: 'Frontend Developer',
+        company: 'Tech Solutions Inc.',
+        companyLogo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=100&h=100&fit=crop',
+        location: 'San Francisco, CA',
+        type: 'Full-time',
+        remote: true,
+        salary: '$90,000 - $130,000',
+        experience: '2-5 years',
+        postedDate: '2024-01-15',
+        deadline: '2024-02-15',
+        status: 'Active',
+        description: 'We are looking for a talented Frontend Developer to join our team and help build amazing user experiences.',
+        requirements: [
+            'Strong proficiency in JavaScript, HTML, and CSS',
+            'Experience with React.js and modern frontend frameworks',
+            'Knowledge of responsive design principles',
+            'Understanding of cross-browser compatibility',
+            'Experience with version control systems (Git)'
+        ],
+        responsibilities: [
+            'Develop and maintain user-facing features',
+            'Build reusable code and libraries for future use',
+            'Ensure the technical feasibility of UI/UX designs',
+            'Optimize applications for maximum speed and scalability',
+            'Collaborate with other team members and stakeholders'
+        ],
+        benefits: [
+            'Competitive salary and equity',
+            'Health, dental, and vision insurance',
+            'Flexible work hours and remote work options',
+            'Professional development opportunities',
+            '401(k) matching'
+        ],
+        requiredSkills: ['React', 'TypeScript', 'Tailwind CSS', 'JavaScript', 'HTML', 'CSS'],
+        preferredSkills: ['Next.js', 'GraphQL', 'Jest', 'Webpack'],
+        industry: 'Technology',
+        department: 'Engineering',
+        teamSize: 8,
+        techStack: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'AWS'],
+        applicationCount: 24,
+        interviewStages: ['Phone Screen', 'Technical Assessment', 'Onsite Interview', 'Final Round']
+    },
+    {
+        id: 'job102',
+        title: 'Data Scientist',
+        company: 'Data Insights LLC',
+        companyLogo: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=100&h=100&fit=crop',
+        location: 'New York, NY',
+        type: 'Full-time',
+        remote: true,
+        salary: '$110,000 - $160,000',
+        experience: '3-7 years',
+        postedDate: '2024-01-10',
+        deadline: '2024-02-10',
+        status: 'Active',
+        description: 'Join our data science team to develop cutting-edge machine learning models and drive data-driven decisions.',
+        requirements: [
+            'Advanced degree in Statistics, Mathematics, Computer Science, or related field',
+            'Strong programming skills in Python or R',
+            'Experience with machine learning frameworks (scikit-learn, TensorFlow, or PyTorch)',
+            'Knowledge of statistical analysis and experimental design',
+            'Experience with SQL and data manipulation'
+        ],
+        responsibilities: [
+            'Develop and implement machine learning models',
+            'Analyze large datasets to identify trends and patterns',
+            'Collaborate with cross-functional teams to define business problems',
+            'Present findings and recommendations to stakeholders',
+            'Stay current with latest developments in data science'
+        ],
+        benefits: [
+            'Competitive salary and performance bonuses',
+            'Comprehensive health benefits',
+            'Flexible work arrangements',
+            'Conference and training budget',
+            'Stock options'
+        ],
+        requiredSkills: ['Python', 'SQL', 'PyTorch', 'NLP', 'Machine Learning', 'Data Analysis'],
+        preferredSkills: ['R', 'TensorFlow', 'AWS', 'Docker', 'Kubernetes'],
+        industry: 'Technology',
+        department: 'Data Science',
+        teamSize: 12,
+        techStack: ['Python', 'PyTorch', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
+        applicationCount: 18,
+        interviewStages: ['Phone Screen', 'Technical Assessment', 'Take-home Project', 'Onsite Interview']
+    },
+    {
+        id: 'job103',
+        title: 'Senior Backend Engineer',
+        company: 'InnovateCorp',
+        companyLogo: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=100&h=100&fit=crop',
+        location: 'Austin, TX',
+        type: 'Full-time',
+        remote: false,
+        salary: '$130,000 - $180,000',
+        experience: '5-10 years',
+        postedDate: '2024-01-12',
+        deadline: '2024-02-12',
+        status: 'Active',
+        description: 'We are seeking a Senior Backend Engineer to architect and build scalable systems that power our platform.',
+        requirements: [
+            'Strong experience with Java, Spring Boot, and microservices',
+            'Knowledge of distributed systems and cloud architecture',
+            'Experience with containerization (Docker, Kubernetes)',
+            'Understanding of database design and optimization',
+            'Experience with CI/CD pipelines and DevOps practices'
+        ],
+        responsibilities: [
+            'Design and implement scalable backend services',
+            'Architect microservices and API designs',
+            'Optimize system performance and reliability',
+            'Mentor junior developers and conduct code reviews',
+            'Collaborate with product and infrastructure teams'
+        ],
+        benefits: [
+            'Competitive salary and equity package',
+            'Health, dental, and vision coverage',
+            'Flexible PTO policy',
+            'Professional development and training',
+            'Gym membership and wellness programs'
+        ],
+        requiredSkills: ['Java', 'Spring Boot', 'Microservices', 'Docker', 'Kubernetes', 'AWS'],
+        preferredSkills: ['Go', 'GraphQL', 'Redis', 'Elasticsearch', 'Terraform'],
+        industry: 'Technology',
+        department: 'Engineering',
+        teamSize: 15,
+        techStack: ['Java', 'Spring Boot', 'PostgreSQL', 'Redis', 'Kubernetes', 'AWS'],
+        applicationCount: 15,
+        interviewStages: ['Phone Screen', 'System Design', 'Technical Assessment', 'Onsite Interview']
+    },
+    {
+        id: 'job104',
+        title: 'Product Manager',
+        company: 'GrowthTech',
+        companyLogo: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=100&h=100&fit=crop',
+        location: 'Seattle, WA',
+        type: 'Full-time',
+        remote: true,
+        salary: '$120,000 - $170,000',
+        experience: '4-8 years',
+        postedDate: '2024-01-08',
+        deadline: '2024-02-08',
+        status: 'Active',
+        description: 'Lead product strategy and execution for our B2B SaaS platform, driving growth and user satisfaction.',
+        requirements: [
+            'Bachelor\'s degree in Business, Engineering, or related field',
+            'Proven experience in product management for SaaS products',
+            'Strong analytical and problem-solving skills',
+            'Experience with agile development methodologies',
+            'Excellent communication and stakeholder management skills'
+        ],
+        responsibilities: [
+            'Define product vision, strategy, and roadmap',
+            'Gather and prioritize product requirements',
+            'Work closely with engineering, design, and marketing teams',
+            'Analyze market trends and competitive landscape',
+            'Drive product launches and go-to-market strategies'
+        ],
+        benefits: [
+            'Competitive salary and equity',
+            'Comprehensive health benefits',
+            'Remote work flexibility',
+            'Professional development budget',
+            'Unlimited PTO'
+        ],
+        requiredSkills: ['Product Management', 'Agile', 'Data Analysis', 'User Research', 'Strategy'],
+        preferredSkills: ['SQL', 'A/B Testing', 'Customer Success', 'B2B SaaS'],
+        industry: 'Technology',
+        department: 'Product',
+        teamSize: 6,
+        techStack: ['Jira', 'Amplitude', 'Mixpanel', 'Intercom', 'Slack'],
+        applicationCount: 22,
+        interviewStages: ['Phone Screen', 'Product Case Study', 'Stakeholder Interview', 'Final Round']
+    },
+    {
+        id: 'job105',
+        title: 'UX/UI Designer',
+        company: 'Creative Studios',
+        companyLogo: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=100&h=100&fit=crop',
+        location: 'Los Angeles, CA',
+        type: 'Full-time',
+        remote: true,
+        salary: '$85,000 - $125,000',
+        experience: '3-6 years',
+        postedDate: '2024-01-14',
+        deadline: '2024-02-14',
+        status: 'Active',
+        description: 'Create beautiful and intuitive user experiences that delight our customers and drive business growth.',
+        requirements: [
+            'Strong portfolio demonstrating UX/UI design skills',
+            'Experience with design tools (Figma, Sketch, Adobe Creative Suite)',
+            'Understanding of user-centered design principles',
+            'Knowledge of design systems and component libraries',
+            'Experience with user research and usability testing'
+        ],
+        responsibilities: [
+            'Design user interfaces and user experiences',
+            'Create wireframes, prototypes, and high-fidelity designs',
+            'Conduct user research and usability testing',
+            'Collaborate with product managers and developers',
+            'Maintain and evolve design systems'
+        ],
+        benefits: [
+            'Competitive salary and benefits',
+            'Flexible work arrangements',
+            'Creative and collaborative environment',
+            'Professional development opportunities',
+            'Health and wellness benefits'
+        ],
+        requiredSkills: ['UX Design', 'UI Design', 'Figma', 'User Research', 'Prototyping'],
+        preferredSkills: ['Sketch', 'Adobe Creative Suite', 'Design Systems', 'Animation'],
+        industry: 'Technology',
+        department: 'Design',
+        teamSize: 8,
+        techStack: ['Figma', 'Sketch', 'InVision', 'Principle', 'Zeplin'],
+        applicationCount: 19,
+        interviewStages: ['Portfolio Review', 'Design Challenge', 'Team Interview', 'Final Presentation']
+    }
+];
